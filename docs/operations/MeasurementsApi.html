@@ -1,0 +1,169 @@
+<div class="main-content">
+  <h2><a name=""></a></h2>
+  <p>This is the  API</p>
+
+  
+  
+  <h2><a name="measurementSourcesGet"></a>measurementSourcesGet</h2>
+  <hr>
+  <p></p>
+  <p></p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/measurementSources</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+  </ul>
+  
+  <h2><a name="measurementSourcesPost"></a>measurementSourcesPost</h2>
+  <hr>
+  <p></p>
+  <p>Set measurement source</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/measurementSources</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <div class="parameter">
+      
+        
+        
+      
+      
+
+      
+	    <p class="param-description">An array of measurements you want to insert</p>
+	  </div>
+    
+  </ul>
+  
+  <h2><a name="measurementsGet"></a>measurementsGet</h2>
+  <hr>
+  <p></p>
+  <p>Get measurements for this user</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/measurements</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">Name of the variable you want measurements for</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">The unit your want the measurements in</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">The lower limit of measurements returned (Epoch)</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">The upper limit of measurements returned (Epoch)</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">The time (in seconds) over which measurements are grouped together</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">The time (in seconds) over which measurements are grouped together</p>
+	  </div>
+    
+  </ul>
+  
+  <h2><a name="measurementsV2Post"></a>measurementsV2Post</h2>
+  <hr>
+  <p></p>
+  <p>Set measurement</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/measurements/v2</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <div class="parameter">
+      
+        
+        
+      
+      
+
+      
+	    <p class="param-description">An array of measurements you want to insert</p>
+	  </div>
+    
+  </ul>
+  
+  <h2><a name="measurementsRangeGet"></a>measurementsRangeGet</h2>
+  <hr>
+  <p></p>
+  <p>Get timestamp of the user&#39;s first and last measurements taken.</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/measurementsRange</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">Enter source name to limit to specific source (varchar)</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">If not specified, uses currently logged in user (bigint)</p>
+	  </div>
+    
+  </ul>
+  
+  
+</div>

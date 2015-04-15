@@ -1,0 +1,92 @@
+<div class="main-content">
+  <h2><a name=""></a></h2>
+  <p>This is the  API</p>
+
+  
+  
+  <h2><a name="administrationCacheClearGet"></a>administrationCacheClearGet</h2>
+  <hr>
+  <p></p>
+  <p>Clears the memcached cache for the units and some other things.</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/administration/cache/clear</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+  </ul>
+  
+  <h2><a name="administrationCorrelationsUpdateGet"></a>administrationCorrelationsUpdateGet</h2>
+  <hr>
+  <p></p>
+  <p>Recalculate correlations for a variable</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/administration/correlations/update</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">Original name of variable for which correlations are to be calculated (varchar)</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">ID for user for whom the correlations should be recalculated.</p>
+	  </div>
+    
+  </ul>
+  
+  <h2><a name="administrationCorrelationsUpdateAllUsersGet"></a>administrationCorrelationsUpdateAllUsersGet</h2>
+  <hr>
+  <p></p>
+  <p>Recalculates correlations for all variables, for all users.</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/administration/correlations/updateAllUsers</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+  </ul>
+  
+  <h2><a name="administrationCorrelationsUpdateAllVariablesGet"></a>administrationCorrelationsUpdateAllVariablesGet</h2>
+  <hr>
+  <p></p>
+  <p>Updates the correlations for all variables for a given user.</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/administration/correlations/updateAllVariables</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">ID for user for whom the correlations should be recalculated. If empty, uses currently logged in user.</p>
+	  </div>
+    
+  </ul>
+  
+  
+</div>

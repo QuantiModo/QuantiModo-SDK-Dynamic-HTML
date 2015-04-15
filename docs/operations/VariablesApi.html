@@ -1,0 +1,238 @@
+<div class="main-content">
+  <h2><a name=""></a></h2>
+  <p>This is the  API</p>
+
+  
+  
+  <h2><a name="publicVariablesGet"></a>publicVariablesGet</h2>
+  <hr>
+  <p></p>
+  <p>Get public variables</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/public/variables</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+  </ul>
+  
+  <h2><a name="publicVariablesSearchSearchGet"></a>publicVariablesSearchSearchGet</h2>
+  <hr>
+  <p></p>
+  <p>Get top 5 PUBLIC variables with the most correlations containing the entered search characters. For example, search for &#39;mood&#39; as an effect. Since &#39;Overall Mood&#39; has a lot of correlations with other variables, it should be in the autocomplete list.</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/public/variables/search/{search}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">Search query</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">Allows us to specify which column in the `correlations` table will be searched. Choices are effect or cause.</p>
+	  </div>
+    
+  </ul>
+  
+  <h2><a name="variableCategoriesGet"></a>variableCategoriesGet</h2>
+  <hr>
+  <p></p>
+  <p>The variable categories include Activity, Causes of Illness, Cognitive Performance, Conditions, Environment, Foods, Location, Miscellaneous, Mood, Nutrition, Physical Activity, Physique, Sleep, Social Interactions, Symptoms, Treatments, Vital Signs, and Work.</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/variableCategories</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+  </ul>
+  
+  <h2><a name="variableUserSettingsPost"></a>variableUserSettingsPost</h2>
+  <hr>
+  <p></p>
+  <p>Change variable user setting</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/variableUserSettings</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <div class="parameter">
+      
+        
+        
+      
+      
+
+      
+	    <p class="param-description">Variable user settings data</p>
+	  </div>
+    
+  </ul>
+  
+  <h2><a name="variablesGet"></a>variablesGet</h2>
+  <hr>
+  <p></p>
+  <p>Get variables by the category name</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/variables</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">User id</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">Category name</p>
+	  </div>
+    
+  </ul>
+  
+  <h2><a name="variablesPost"></a>variablesPost</h2>
+  <hr>
+  <p></p>
+  <p>Allows the client to create a new variable in the `variables` table.</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/variables</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>POST</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <div class="parameter">
+      
+        
+        
+      
+      
+
+      
+	    <p class="param-description">Original name for the variable.</p>
+	  </div>
+    
+  </ul>
+  
+  <h2><a name="variablesSearchSearchGet"></a>variablesSearchSearchGet</h2>
+  <hr>
+  <p></p>
+  <p>Get variables containing the search characters. Used to provide auto-complete function in variable search boxes.</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/variables/search/{search}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">Search query</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">Filter variables by category name.</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">Filter variables by source name.</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">Search limit</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">Search offset</p>
+	  </div>
+    
+  </ul>
+  
+  <h2><a name="variablesVariableNameGet"></a>variablesVariableNameGet</h2>
+  <hr>
+  <p></p>
+  <p>Get all of the settings and information about a variable by name</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/variables/{variableName}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" id=""><a href="#"></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">Variable name</p>
+	  </div>
+    
+	  <div class="parameter">
+      
+      
+
+      
+	    <p class="param-description">categoryName` parameter allows us to filter the variables so that only ones from the specified category are returned.</p>
+	  </div>
+    
+  </ul>
+  
+  
+</div>
