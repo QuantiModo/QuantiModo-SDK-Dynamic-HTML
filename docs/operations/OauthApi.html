@@ -7,7 +7,7 @@
   <h2><a name="oauth2AccesstokenGet"></a>oauth2AccesstokenGet</h2>
   <hr>
   <p></p>
-  <p>Client provides authorization token obtained from /api/oauth2/authorize to this endpoint and receives an access token. Access token can then</p>
+  <p>Client provides authorization token obtained from /api/oauth2/authorize to this endpoint and receives an access token. Access token can then be used to query different API endpoints of QuantiModo.</p>
   <h3 class="section">URL</h3>
   <code>https://localhost/api/oauth2/accesstoken</code>
   <h3 class="section">HTTP Method</h3>
@@ -23,46 +23,46 @@
       
       
       
-      <span class="param-name">responseType</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Response type</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">redirectUri</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Redirect uri</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">realm</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Realm</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
       <span class="param-name">clientId</span>
       <span class="param-type">String</span>
       
       <p class="param-description">Client id</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">clientSecret</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Client secret</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">grantType</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Grant Type can be &#39;authorization_code&#39; or &#39;refresh_token&#39;</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">responseType</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Response type</p>
 	  </li>
     
 	  <li class="parameter">
@@ -83,10 +83,34 @@
       
       
       
+      <span class="param-name">redirectUri</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Redirect uri</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
       <span class="param-name">state</span>
       <span class="param-type">String</span>
       
       <p class="param-description">State</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">realm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Realm</p>
 	  </li>
     
   </ul>
@@ -94,7 +118,7 @@
   <h2><a name="oauth2AuthorizeGet"></a>oauth2AuthorizeGet</h2>
   <hr>
   <p></p>
-  <p>Ask the user if they want to allow a client applications to submit or obtain data from their QM  account.</p>
+  <p>Ask the user if they want to allow a client applications to submit or obtain data from their QM account. It will redirect the user to the url provided by the client application with the code as a query parameter or error in case of an error.</p>
   <h3 class="section">URL</h3>
   <code>https://localhost/api/oauth2/authorize</code>
   <h3 class="section">HTTP Method</h3>
@@ -122,22 +146,10 @@
       
       
       
-      <span class="param-name">realm</span>
+      <span class="param-name">clientSecret</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">Name of the realm representing the users of your distributed applications and services. A \&quot;realm\&quot; attribute MAY be included to indicate the scope of protection.</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">redirectUri</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">The redirect URI is the URL within your client application that will receive the OAuth2 credentials.</p>
+      <p class="param-description">This is the secret for your obtained clietn_id. QuantiModo uses this to validate that only your application uses the client_id.</p>
 	  </li>
     
 	  <li class="parameter">
@@ -170,10 +182,34 @@
       
       
       
+      <span class="param-name">redirectUri</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The redirect URI is the URL within your client application that will receive the OAuth2 credentials.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
       <span class="param-name">state</span>
       <span class="param-type">String</span>
       
       <p class="param-description">An opaque string that is round-tripped in the protocol; that is to say, it is returned as a URI parameter in the Basic flow, and in the URI</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">realm</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Name of the realm representing the users of your distributed applications and services. A \&quot;realm\&quot; attribute MAY be included to indicate the scope of protection.</p>
 	  </li>
     
   </ul>
