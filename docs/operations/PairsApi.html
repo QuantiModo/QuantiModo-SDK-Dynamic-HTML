@@ -35,6 +35,18 @@
       
       
       
+      <span class="param-name">effect</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Original variable name for the outcome or dependent variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
       <span class="param-name">causeSource</span>
       <span class="param-type">String</span>
       
@@ -83,18 +95,6 @@
       
       
       
-      <span class="param-name">effect</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Original variable name for the outcome or dependent variable</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
       <span class="param-name">effectSource</span>
       <span class="param-type">String</span>
       
@@ -135,6 +135,42 @@
       <span class="param-type">String</span>
       
       <p class="param-description">The earliest date (in epoch time) for which we should return measurements</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">limit</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">offset</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Now suppose you wanted to show results 11-20. You&#39;d set the offset to 10 and the limit to 10.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sort</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Sort by given field. If the field is prefixed with `-, it will sort in descending order.</p>
 	  </li>
     
   </ul>

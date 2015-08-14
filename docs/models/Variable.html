@@ -2,6 +2,12 @@
 <h2>Variable</h2>
   
 <ul class="parameter">
+  <li class="param-required-">id : Integer
+	  <br/>Variable ID
+  </li>
+</ul>
+  
+<ul class="parameter">
   <li class="param-required-true">name : String
 	  <br/>User-defined variable display name.
   </li>
@@ -52,6 +58,120 @@
 <ul class="parameter">
   <li class="param-required-true">fillingValue : Double
 	  <br/>Value for replacing null measurements
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">joinWith : String
+	  <br/>The Variable this Variable should be joined with. If the variable is joined with some other variable then it is not shown to user in the list of variables.
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">joinedVariables : List
+	  <br/>Array of Variables that are joined with this Variable
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">parent : Integer
+	  <br/>Id of the parent variable if this variable has any parent
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">subVariables : List
+	  <br/>Array of Variables that are sub variables to this Variable
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">onsetDelay : Integer
+	  <br/>How long it takes for a measurement in this variable to take effect
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">durationOfAction : Integer
+	  <br/>How long the effect of a measurement in this variable lasts
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">earliestMeasurementTime : Integer
+	  <br/>Earliest measurement time
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">latestMeasurementTime : Integer
+	  <br/>Latest measurement time
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">updated : Integer
+	  <br/>When this variable or its settings were last updated
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">causeOnly : Integer
+	  <br/>A value of 1 indicates that this variable is generally a cause in a causal relationship.  An example of a causeOnly variable would be a variable such as Cloud Cover which would generally not be influenced by the behaviour of the user.
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">numberOfCorrelations : Integer
+	  <br/>Number of correlations
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">outcome : Integer
+	  <br/>Outcome variables (those with `outcome` == 1) are variables for which a human would generally want to identify the influencing factors.  These include symptoms of illness, physique, mood, cognitive performance, etc.  Generally correlation calculations are only performed on outcome variables.
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">measurementsAtLastAnalysis : Integer
+	  <br/>The number of measurements that a given user had for this variable the last time a correlation calculation was performed. Generally correlation values are only updated once the current number of measurements for a variable is more than 10% greater than the measurementsAtLastAnalysis.  This avoids a computationally-demanding recalculation when there&#39;s not enough new data to make a significant difference in the correlation.
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">numberOfMeasurements : Integer
+	  <br/>Number of measurements
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">lastUnit : Integer
+	  <br/>Last unit
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">lastValue : Integer
+	  <br/>Last value
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">mostCommonValue : Integer
+	  <br/>Most common value
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">mostCommonUnit : Integer
+	  <br/>Most common unit
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">lastSource : Integer
+	  <br/>Last source
   </li>
 </ul>
   

@@ -49,7 +49,7 @@
   <h2><a name="measurementsGet"></a>measurementsGet</h2>
   <hr>
   <p></p>
-  <p>Measurements are any value that can be recorded like daily steps, a mood rating, or apples eaten.</p>
+  <p>Measurements are any value that can be recorded like daily steps, a mood rating, or apples eaten. &lt;br&gt;Supported filter parameters:&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;value&lt;/b&gt; - Value of measurement&lt;/li&gt;&lt;li&gt;&lt;b&gt;lastUpdated&lt;/b&gt; - The time that this measurement was created or last updated in the UTC format \&quot;YYYY-MM-DDThh:mm:ss\&quot;&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;</p>
   <h3 class="section">URL</h3>
   <code>https://localhost/api/measurements</code>
   <h3 class="section">HTTP Method</h3>
@@ -129,6 +129,42 @@
       <span class="param-type">String</span>
       
       <p class="param-description">The time (in seconds) over which measurements are grouped together</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">limit</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">offset</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Now suppose you wanted to show results 11-20. You&#39;d set the offset to 10 and the limit to 10.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sort</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Sort by given field. If the field is prefixed with `-, it will sort in descending order.</p>
 	  </li>
     
   </ul>
