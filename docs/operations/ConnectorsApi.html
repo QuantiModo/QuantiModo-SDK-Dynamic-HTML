@@ -4,12 +4,12 @@
 
   
   
-  <h2><a name="connectorsListGet"></a>connectorsListGet</h2>
+  <h2><a name="v1ConnectorsListGet"></a>v1ConnectorsListGet</h2>
   <hr>
   <p></p>
   <p>Returns a list of all available connectors. A connector pulls data from other data providers using their API or a screenscraper.</p>
   <h3 class="section">URL</h3>
-  <code>https://localhost/api/connectors/list</code>
+  <code>https://localhost/api/v1/connectors/list</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
@@ -19,12 +19,12 @@
   	
   </ul>
   
-  <h2><a name="connectorsConnectorConnectGet"></a>connectorsConnectorConnectGet</h2>
+  <h2><a name="v1ConnectorsConnectorConnectGet"></a>v1ConnectorsConnectorConnectGet</h2>
   <hr>
   <p></p>
   <p>Attempt to obtain a token from the data provider, store it in the database. With this, the connector to continue to obtain new user data until the token is revoked.</p>
   <h3 class="section">URL</h3>
-  <code>https://localhost/api/connectors/{connector}/connect</code>
+  <code>https://localhost/api/v1/connectors/{connector}/connect</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
@@ -46,174 +46,12 @@
     
   </ul>
   
-  <h2><a name="connectorsConnectorConnectInstructionsGet"></a>connectorsConnectorConnectInstructionsGet</h2>
-  <hr>
-  <p></p>
-  <p>Returns instructions that describe what parameters and endpoint to use to connect to the given data provider.</p>
-  <h3 class="section">URL</h3>
-  <code>https://localhost/api/connectors/{connector}/connectInstructions</code>
-  <h3 class="section">HTTP Method</h3>
-  <code>GET</code>
-  <h3 class="section">Response Type</h3>
-  <div class="model" data-model=""><a href=""></a></div>
-  <h3 class="section">Parameters</h3>
-  <ul>
-  	
-	  <li class="parameter">
-      
-      
-      <span class="param-in">Path: </span>
-      
-      
-      <span class="param-name">connector</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Lowercase system name of the source application or device. Get a list of available connectors from the /connectors/list endpoint.</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">url</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">URL which should be used to enable the connector</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">parameters</span>
-      <span class="param-type">List(String)</span>
-      
-      <p class="param-description">Array of Parameters for the request to enable connector</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">usePopup</span>
-      <span class="param-type">Boolean</span>
-      
-      <p class="param-description">Should use popup when enabling connector</p>
-	  </li>
-    
-  </ul>
-  
-  <h2><a name="connectorsConnectorConnectParameterGet"></a>connectorsConnectorConnectParameterGet</h2>
-  <hr>
-  <p></p>
-  <p>Returns instructions that describe what parameters and endpoint to use to connect to the given data provider.</p>
-  <h3 class="section">URL</h3>
-  <code>https://localhost/api/connectors/{connector}/connectParameter</code>
-  <h3 class="section">HTTP Method</h3>
-  <code>GET</code>
-  <h3 class="section">Response Type</h3>
-  <div class="model" data-model=""><a href=""></a></div>
-  <h3 class="section">Parameters</h3>
-  <ul>
-  	
-	  <li class="parameter">
-      
-      
-      <span class="param-in">Path: </span>
-      
-      
-      <span class="param-name">connector</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Lowercase system name of the source application or device. Get a list of available connectors from the /connectors/list endpoint.</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">displayName</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Name of the parameter that is user visible in the form</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">key</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Name of the property that the user has to enter such as username or password Connector (used in HTTP request) TODO What&#39;s a connector key?</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">usePopup</span>
-      <span class="param-type">Boolean</span>
-      
-      <p class="param-description">Should use popup when enabling connector</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">type</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Type of input field such as those found here http://www.w3schools.com/tags/tag_input.asp</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">placeholder</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Placeholder hint value for the parameter input tag</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">defaultValue</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Default parameter value</p>
-	  </li>
-    
-  </ul>
-  
-  <h2><a name="connectorsConnectorDisconnectGet"></a>connectorsConnectorDisconnectGet</h2>
+  <h2><a name="v1ConnectorsConnectorDisconnectGet"></a>v1ConnectorsConnectorDisconnectGet</h2>
   <hr>
   <p></p>
   <p>The disconnect method deletes any stored tokens or connection information from the connectors database.</p>
   <h3 class="section">URL</h3>
-  <code>https://localhost/api/connectors/{connector}/disconnect</code>
+  <code>https://localhost/api/v1/connectors/{connector}/disconnect</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
@@ -235,16 +73,16 @@
     
   </ul>
   
-  <h2><a name="connectorsConnectorInfoGet"></a>connectorsConnectorInfoGet</h2>
+  <h2><a name="v1ConnectorsConnectorInfoGet"></a>v1ConnectorsConnectorInfoGet</h2>
   <hr>
   <p></p>
   <p>Returns information about the connector such as the connector id, whether or not is connected for this user (i.e. we have a token or credentials), and its update history for the user.</p>
   <h3 class="section">URL</h3>
-  <code>https://localhost/api/connectors/{connector}/info</code>
+  <code>https://localhost/api/v1/connectors/{connector}/info</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
-  <div class="model" data-model=""><a href=""></a></div>
+  <div class="model" data-model="ConnectorInfo"><a href="">ConnectorInfo</a></div>
   <h3 class="section">Parameters</h3>
   <ul>
   	
@@ -262,12 +100,12 @@
     
   </ul>
   
-  <h2><a name="connectorsConnectorUpdateGet"></a>connectorsConnectorUpdateGet</h2>
+  <h2><a name="v1ConnectorsConnectorUpdateGet"></a>v1ConnectorsConnectorUpdateGet</h2>
   <hr>
   <p></p>
   <p>The update method tells the QM Connector Framework to check with the data provider (such as Fitbit or MyFitnessPal) and retrieve any new measurements available.</p>
   <h3 class="section">URL</h3>
-  <code>https://localhost/api/connectors/{connector}/update</code>
+  <code>https://localhost/api/v1/connectors/{connector}/update</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
