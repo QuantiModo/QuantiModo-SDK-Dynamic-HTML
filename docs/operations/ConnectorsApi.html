@@ -4,10 +4,64 @@
 
   
   
+  <h2><a name="v1Connect.jsGet"></a>v1Connect.jsGet</h2>
+  <hr>
+  <p></p>
+  <p>Get embeddable connect javascript. Usage:\n\n  - Embedding in applications with popups for 3rd-party authentication\nwindows.\n\n    Use `qmSetupInPopup` function after connecting `connect.js`.\n\n  - Embedding in applications with popups for 3rd-party authentication\nwindows.\n\n    Requires a selector to block. It will be embedded in this block.\n\n    Use `qmSetupOnPage` function after connecting `connect.js`.\n\n  - Embedding in mobile applications without popups for 3rd-party\nauthentication.\n\n    Use `qmSetupOnMobile` function after connecting `connect.js`.</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/v1/connect.js</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">t</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User token</p>
+	  </li>
+    
+  </ul>
+  
+  <h2><a name="v1ConnectMobileGet"></a>v1ConnectMobileGet</h2>
+  <hr>
+  <p></p>
+  <p>Mobile connect page</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/v1/connect/mobile</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">t</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User token</p>
+	  </li>
+    
+  </ul>
+  
   <h2><a name="v1ConnectorsListGet"></a>v1ConnectorsListGet</h2>
   <hr>
   <p></p>
-  <p>Returns a list of all available connectors. A connector pulls data from other data providers using their API or a screenscraper.</p>
+  <p>A connector pulls data from other data providers using their API or a screenscraper. Returns a list of all available connectors and information about them such as their id, name, whether the user has provided access, logo url, connection instructions, and the update history.</p>
   <h3 class="section">URL</h3>
   <code>https://localhost/api/v1/connectors/list</code>
   <h3 class="section">HTTP Method</h3>
@@ -42,6 +96,168 @@
       <span class="param-type">String</span>
       
       <p class="param-description">Lowercase system name of the source application or device. Get a list of available connectors from the /connectors/list endpoint.</p>
+	  </li>
+    
+  </ul>
+  
+  <h2><a name="v1ConnectorsConnectorConnectInstructionsGet"></a>v1ConnectorsConnectorConnectInstructionsGet</h2>
+  <hr>
+  <p></p>
+  <p>Returns instructions that describe what parameters and endpoint to use to connect to the given data provider.</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/v1/connectors/{connector}/connectInstructions</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model=""><a href=""></a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">connector</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Lowercase system name of the source application or device. Get a list of available connectors from the /connectors/list endpoint.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">parameters</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">JSON Array of Parameters for the request to enable connector.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">url</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">URL which should be used to enable the connector.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">usePopup</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Should use popup when enabling connector</p>
+	  </li>
+    
+  </ul>
+  
+  <h2><a name="v1ConnectorsConnectorConnectParameterGet"></a>v1ConnectorsConnectorConnectParameterGet</h2>
+  <hr>
+  <p></p>
+  <p>Returns instructions that describe what parameters and endpoint to use to connect to the given data provider.</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/v1/connectors/{connector}/connectParameter</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="ConnectorInstruction"><a href="">ConnectorInstruction</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">connector</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Lowercase system name of the source application or device. Get a list of available connectors from the /connectors/list endpoint.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">displayName</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Name of the parameter that is user visible in the form</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">key</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Name of the property that the user has to enter such as username or password Connector (used in HTTP request)</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">placeholder</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Placeholder hint value for the parameter input tag.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">type</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Type of input field such as those found here http://www.w3schools.com/tags/tag_input.asp</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">usePopup</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Should use popup when enabling connector</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">defaultValue</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Default parameter value</p>
 	  </li>
     
   </ul>

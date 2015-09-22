@@ -4,12 +4,12 @@
 
   
   
-  <h2><a name="correlationsGet"></a>correlationsGet</h2>
+  <h2><a name="v1CorrelationsGet"></a>v1CorrelationsGet</h2>
   <hr>
   <p></p>
   <p>Get correlations.&lt;br&gt;Supported filter parameters:&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;correlationCoefficient&lt;/b&gt; - Pearson correlation coefficient between cause and effect after lagging by onset delay and grouping by duration of action&lt;/li&gt;&lt;li&gt;&lt;b&gt;onsetDelay&lt;/b&gt; - The number of seconds which pass following a cause measurement before an effect would likely be observed.&lt;/li&gt;&lt;li&gt;&lt;b&gt;durationOfAction&lt;/b&gt; - The time in seconds over which the cause would be expected to exert a measurable effect. We have selected a default value for each variable. This default value may be replaced by a user specified by adjusting their variable user settings.&lt;/li&gt;&lt;li&gt;&lt;b&gt;lastUpdated&lt;/b&gt; - The time that this measurement was last updated in the UTC format \&quot;YYYY-MM-DDThh:mm:ss\&quot;&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;</p>
   <h3 class="section">URL</h3>
-  <code>https://localhost/api/correlations</code>
+  <code>https://localhost/api/v1/correlations</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
@@ -79,49 +79,10 @@
     
   </ul>
   
-  <h2><a name="publicCorrelationsSearchSearchGet"></a>publicCorrelationsSearchSearchGet</h2>
-  <hr>
-  <p></p>
-  <p>Returns the average correlations from all users for all public variables that contain the characters in the search query. Returns average of all users public variable correlations with a specified cause or effect.</p>
-  <h3 class="section">URL</h3>
-  <code>https://localhost/api/public/correlations/search/{search}</code>
-  <h3 class="section">HTTP Method</h3>
-  <code>GET</code>
-  <h3 class="section">Response Type</h3>
-  <div class="model" data-model="Correlation"><a href="">List</a></div>
-  <h3 class="section">Parameters</h3>
-  <ul>
-  	
-	  <li class="parameter">
-      
-      
-      <span class="param-in">Path: </span>
-      
-      
-      <span class="param-name">search</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Name of the variable that you want to know the causes or effects of.</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">effectOrCause</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Specifies whether to return the effects or causes of the searched variable.</p>
-	  </li>
-    
-  </ul>
-  
   <h2><a name="v1CorrelationsPost"></a>v1CorrelationsPost</h2>
   <hr>
   <p></p>
-  <p>Add correlation or/and vote for it</p>
+  <p>Add correlation</p>
   <h3 class="section">URL</h3>
   <code>https://localhost/api/v1/correlations</code>
   <h3 class="section">HTTP Method</h3>
@@ -148,7 +109,7 @@
   <h2><a name="v1OrganizationsOrganizationIdUsersUserIdVariablesVariableNameCausesGet"></a>v1OrganizationsOrganizationIdUsersUserIdVariablesVariableNameCausesGet</h2>
   <hr>
   <p></p>
-  <p>Returns average of all correlations and votes for all user cause variables for a given effect. If parameter \&quot;include_public\&quot; is used, it also returns public correlations. User correlation overwrites or supersedes public correlation.</p>
+  <p>Returns average of all correlations and votes for all user cause variables for a given cause. If parameter \&quot;include_public\&quot; is used, it also returns public correlations. User correlation overwrites or supersedes public correlation.</p>
   <h3 class="section">URL</h3>
   <code>https://localhost/api/v1/organizations/{organizationId}/users/{userId}/variables/{variableName}/causes</code>
   <h3 class="section">HTTP Method</h3>
@@ -291,6 +252,45 @@
       <span class="param-type">String</span>
       
       <p class="param-description">Include bublic correlations, Can be \&quot;1\&quot; or empty.</p>
+	  </li>
+    
+  </ul>
+  
+  <h2><a name="v1PublicCorrelationsSearchSearchGet"></a>v1PublicCorrelationsSearchSearchGet</h2>
+  <hr>
+  <p></p>
+  <p>Returns the average correlations from all users for all public variables that contain the characters in the search query. Returns average of all users public variable correlations with a specified cause or effect.</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/v1/public/correlations/search/{search}</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="Correlation"><a href="">List</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      
+      <span class="param-in">Path: </span>
+      
+      
+      <span class="param-name">search</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Name of the variable that you want to know the causes or effects of.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">effectOrCause</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Specifies whether to return the effects or causes of the searched variable.</p>
 	  </li>
     
   </ul>
@@ -438,6 +438,18 @@
       <span class="param-type">String</span>
       
       <p class="param-description">Effect variable name</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">correlation</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Correlation value</p>
 	  </li>
     
 	  <li class="parameter">

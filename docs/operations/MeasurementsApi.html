@@ -4,12 +4,12 @@
 
   
   
-  <h2><a name="measurementSourcesGet"></a>measurementSourcesGet</h2>
+  <h2><a name="v1MeasurementSourcesGet"></a>v1MeasurementSourcesGet</h2>
   <hr>
   <p></p>
   <p>Returns a list of all the apps from which measurement data is obtained.</p>
   <h3 class="section">URL</h3>
-  <code>https://localhost/api/measurementSources</code>
+  <code>https://localhost/api/v1/measurementSources</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
@@ -19,12 +19,12 @@
   	
   </ul>
   
-  <h2><a name="measurementSourcesPost"></a>measurementSourcesPost</h2>
+  <h2><a name="v1MeasurementSourcesPost"></a>v1MeasurementSourcesPost</h2>
   <hr>
   <p></p>
   <p>Add a life-tracking app or device to the QuantiModo list of data sources.</p>
   <h3 class="section">URL</h3>
-  <code>https://localhost/api/measurementSources</code>
+  <code>https://localhost/api/v1/measurementSources</code>
   <h3 class="section">HTTP Method</h3>
   <code>POST</code>
   <h3 class="section">Response Type</h3>
@@ -46,12 +46,12 @@
     
   </ul>
   
-  <h2><a name="measurementsGet"></a>measurementsGet</h2>
+  <h2><a name="v1MeasurementsGet"></a>v1MeasurementsGet</h2>
   <hr>
   <p></p>
   <p>Measurements are any value that can be recorded like daily steps, a mood rating, or apples eaten. &lt;br&gt;Supported filter parameters:&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;value&lt;/b&gt; - Value of measurement&lt;/li&gt;&lt;li&gt;&lt;b&gt;lastUpdated&lt;/b&gt; - The time that this measurement was created or last updated in the UTC format \&quot;YYYY-MM-DDThh:mm:ss\&quot;&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;</p>
   <h3 class="section">URL</h3>
-  <code>https://localhost/api/measurements</code>
+  <code>https://localhost/api/v1/measurements</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
@@ -169,12 +169,12 @@
     
   </ul>
   
-  <h2><a name="measurementsV2Post"></a>measurementsV2Post</h2>
+  <h2><a name="v1MeasurementsPost"></a>v1MeasurementsPost</h2>
   <hr>
   <p></p>
   <p>You can submit or update multiple measurements in a \&quot;measurements\&quot; sub-array.  If the variable these measurements correspond to does not already exist in the database, it will be automatically added.  The request body should look something like [{\&quot;measurements\&quot;:[{\&quot;timestamp\&quot;:1406419860,\&quot;value\&quot;:\&quot;1\&quot;,\&quot;note\&quot;:\&quot;I am a note about back pain.\&quot;},{\&quot;timestamp\&quot;:1406519865,\&quot;value\&quot;:\&quot;3\&quot;,\&quot;note\&quot;:\&quot;I am another note about back pain.\&quot;}],\&quot;name\&quot;:\&quot;Back Pain\&quot;,\&quot;source\&quot;:\&quot;QuantiModo\&quot;,\&quot;category\&quot;:\&quot;Symptoms\&quot;,\&quot;combinationOperation\&quot;:\&quot;MEAN\&quot;,\&quot;unit\&quot;:\&quot;/5\&quot;}]</p>
   <h3 class="section">URL</h3>
-  <code>https://localhost/api/measurements/v2</code>
+  <code>https://localhost/api/v1/measurements</code>
   <h3 class="section">HTTP Method</h3>
   <code>POST</code>
   <h3 class="section">Response Type</h3>
@@ -196,12 +196,135 @@
     
   </ul>
   
-  <h2><a name="measurementsRangeGet"></a>measurementsRangeGet</h2>
+  <h2><a name="v1MeasurementsDailyGet"></a>v1MeasurementsDailyGet</h2>
+  <hr>
+  <p></p>
+  <p>Measurements are any value that can be recorded like daily steps, a mood rating, or apples eaten. &lt;br&gt;Supported filter parameters:&lt;br&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;value&lt;/b&gt; - Value of measurement&lt;/li&gt;&lt;li&gt;&lt;b&gt;lastUpdated&lt;/b&gt; - The time that this measurement was created or last updated in the UTC format \&quot;YYYY-MM-DDThh:mm:ss\&quot;&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;</p>
+  <h3 class="section">URL</h3>
+  <code>https://localhost/api/v1/measurements/daily</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="Measurement"><a href="">Measurement</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">variableName</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Name of the variable you want measurements for</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">abbreviatedUnitName</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The unit your want the measurements in</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">startTime</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The lower limit of measurements returned (Iso8601)</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">endTime</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The upper limit of measurements returned (Iso8601)</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">groupingWidth</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The time (in seconds) over which measurements are grouped together</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">groupingTimezone</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The time (in seconds) over which measurements are grouped together</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">limit</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">offset</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Now suppose you wanted to show results 11-20. You&#39;d set the offset to 10 and the limit to 10.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sort</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Sort by given field. If the field is prefixed with `-, it will sort in descending order.</p>
+	  </li>
+    
+  </ul>
+  
+  <h2><a name="v1MeasurementsRangeGet"></a>v1MeasurementsRangeGet</h2>
   <hr>
   <p></p>
   <p>Get Unix time-stamp (epoch time) of the user&#39;s first and last measurements taken.</p>
   <h3 class="section">URL</h3>
-  <code>https://localhost/api/measurementsRange</code>
+  <code>https://localhost/api/v1/measurementsRange</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
