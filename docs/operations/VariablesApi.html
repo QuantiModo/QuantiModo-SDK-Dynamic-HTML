@@ -50,18 +50,6 @@
       
       
       
-      <span class="param-name">effectOrCause</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Allows us to specify which column in the `correlations` table will be searched. Choices are effect or cause.</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
       <span class="param-name">limit</span>
       <span class="param-type">Integer</span>
       
@@ -171,6 +159,78 @@
       <span class="param-type">String</span>
       
       <p class="param-description">Filter data by category</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">name</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Original name of the variable (supports exact name match only)</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">lastUpdated</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Filter by the last time any of the properties of the variable were changed. Uses UTC format \&quot;YYYY-MM-DDThh:mm:ss\&quot;</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">source</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The name of the data source that created the variable (supports exact name match only). So if you have a client application and you only want variables that were last updated by your app, you can include the name of your app here</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">latestMeasurementTime</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Filter variables based on the last time a measurement for them was created or updated in the UTC format \&quot;YYYY-MM-DDThh:mm:ss\&quot;</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">numberOfMeasurements</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Filter variables by the total number of measurements that they have. This could be used of you want to filter or sort by popularity.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">lastSource</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Limit variables to those which measurements were last submitted by a specific source. So if you have a client application and you only want variables that were last updated by your app, you can include the name of your app here. (supports exact name match only)</p>
 	  </li>
     
 	  <li class="parameter">

@@ -7,7 +7,7 @@
   <h2><a name="v1Connect.jsGet"></a>v1Connect.jsGet</h2>
   <hr>
   <p></p>
-  <p>Get embeddable connect javascript. Usage:\n\n  - Embedding in applications with popups for 3rd-party authentication\nwindows.\n\n    Use `qmSetupInPopup` function after connecting `connect.js`.\n\n  - Embedding in applications with popups for 3rd-party authentication\nwindows.\n\n    Requires a selector to block. It will be embedded in this block.\n\n    Use `qmSetupOnPage` function after connecting `connect.js`.\n\n  - Embedding in mobile applications without popups for 3rd-party\nauthentication.\n\n    Use `qmSetupOnMobile` function after connecting `connect.js`.</p>
+  <p>Get embeddable connect javascript. Usage:\n\n  - Embedding in applications with popups for 3rd-party authentication\nwindows.\n\n    Use `qmSetupInPopup` function after connecting `connect.js`.\n\n  - Embedding in applications with popups for 3rd-party authentication\nwindows.\n\n    Requires a selector to block. It will be embedded in this block.\n\n    Use `qmSetupOnPage` function after connecting `connect.js`.\n\n  - Embedding in mobile applications without popups for 3rd-party\nauthentication.\n\n    Use `qmSetupOnMobile` function after connecting `connect.js`.\n\n    if using the MoodiModo Clones, Use `qmSetupOnIonic` function after connecting `connect.js`.</p>
   <h3 class="section">URL</h3>
   <code>https://localhost/api/v1/connect.js</code>
   <h3 class="section">HTTP Method</h3>
@@ -23,10 +23,22 @@
       
       
       
-      <span class="param-name">t</span>
+      <span class="param-name">access token</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">User token</p>
+      <p class="param-description">User&#39;s access token</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">mashape key</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Mashape API key</p>
 	  </li>
     
   </ul>
