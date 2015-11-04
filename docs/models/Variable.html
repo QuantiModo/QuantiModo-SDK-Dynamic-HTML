@@ -3,181 +3,253 @@
   
 <ul class="parameter">
   <li class="param-required-">id : Integer
-	  <br/>Variable ID
+    <br/>id
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">client_id : String
+    <br/>client_id
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">parent_id : Integer
+    <br/>parent_id
+    
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">name : String
-	  <br/>User-defined variable display name.
+    <br/>Name of the variable
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">originalName : String
-	  <br/>Name used when the variable was originally created in the `variables` table.
+  <li class="param-required-true">variable_category_id : Integer
+    <br/>Category of the variable
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">category : String
-	  <br/>Variable category like Mood, Sleep, Physical Activity, Treatment, Symptom, etc.
+  <li class="param-required-true">default_unit_id : Integer
+    <br/>ID of the default unit of measurement to use for this variable
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">abbreviatedUnitName : String
-	  <br/>Abbreviated name of the default unit for the variable
+  <li class="param-required-">combination_operation : String
+    <br/>How to combine values of this variable (for instance, to see a summary of the values over a month) 0 for sum OR 1 for mean
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">abbreviatedUnitId : Integer
-	  <br/>Id of the default unit for the variable
+  <li class="param-required-">filling_value : Float
+    <br/>filling_value
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">sources : String
-	  <br/>Comma-separated list of source names to limit variables to those sources
+  <li class="param-required-">maximum_allowed_value : Float
+    <br/>maximum_allowed_value
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">minimumValue : Double
-	  <br/>Minimum reasonable value for this variable (uses default unit)
+  <li class="param-required-">minimum_allowed_value : Float
+    <br/>minimum_allowed_value
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">maximumValue : Double
-	  <br/>Maximum reasonable value for this variable (uses default unit)
+  <li class="param-required-">onset_delay : Integer
+    <br/>onset_delay
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">combinationOperation : String
-	  <br/>How to aggregate measurements over time.
+  <li class="param-required-">duration_of_action : Integer
+    <br/>duration_of_action
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">fillingValue : Double
-	  <br/>Value for replacing null measurements
+  <li class="param-required-">public : Integer
+    <br/>public
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">joinWith : String
-	  <br/>The Variable this Variable should be joined with. If the variable is joined with some other variable then it is not shown to user in the list of variables.
+  <li class="param-required-">cause_only : Boolean
+    <br/>cause_only
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">joinedVariables : List
-	  <br/>Array of Variables that are joined with this Variable
+  <li class="param-required-">most_common_value : Float
+    <br/>most_common_value
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">parent : Integer
-	  <br/>Id of the parent variable if this variable has any parent
+  <li class="param-required-">most_common_unit_id : Integer
+    <br/>most_common_unit_id
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">subVariables : List
-	  <br/>Array of Variables that are sub variables to this Variable
+  <li class="param-required-">standard_deviation : Float
+    <br/>standard_deviation
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">onsetDelay : Integer
-	  <br/>How long it takes for a measurement in this variable to take effect
+  <li class="param-required-">variance : Float
+    <br/>variance
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">durationOfAction : Integer
-	  <br/>How long the effect of a measurement in this variable lasts
+  <li class="param-required-">mean : Float
+    <br/>mean
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">earliestMeasurementTime : Integer
-	  <br/>Earliest measurement time
+  <li class="param-required-">median : Float
+    <br/>median
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">latestMeasurementTime : Integer
-	  <br/>Latest measurement time
+  <li class="param-required-">number_of_measurements : Float
+    <br/>number_of_measurements
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">updated : Integer
-	  <br/>When this variable or its settings were last updated
+  <li class="param-required-">number_of_unique_values : Float
+    <br/>number_of_unique_values
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">causeOnly : Integer
-	  <br/>A value of 1 indicates that this variable is generally a cause in a causal relationship.  An example of a causeOnly variable would be a variable such as Cloud Cover which would generally not be influenced by the behaviour of the user.
+  <li class="param-required-">skewness : Float
+    <br/>skewness
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">numberOfCorrelations : Integer
-	  <br/>Number of correlations
+  <li class="param-required-">kurtosis : Float
+    <br/>kurtosis
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">outcome : Integer
-	  <br/>Outcome variables (those with `outcome` == 1) are variables for which a human would generally want to identify the influencing factors.  These include symptoms of illness, physique, mood, cognitive performance, etc.  Generally correlation calculations are only performed on outcome variables.
+  <li class="param-required-">status : String
+    <br/>status
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">measurementsAtLastAnalysis : Integer
-	  <br/>The number of measurements that a given user had for this variable the last time a correlation calculation was performed. Generally correlation values are only updated once the current number of measurements for a variable is more than 10% greater than the measurementsAtLastAnalysis.  This avoids a computationally-demanding recalculation when there&#39;s not enough new data to make a significant difference in the correlation.
+  <li class="param-required-">error_message : String
+    <br/>error_message
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">numberOfMeasurements : Integer
-	  <br/>Number of measurements
+  <li class="param-required-">last_successful_update_time : Date
+    <br/>last_successful_update_time
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">lastUnit : String
-	  <br/>Last unit
+  <li class="param-required-">created_at : Date
+    <br/>created_at
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">lastValue : Integer
-	  <br/>Last value
+  <li class="param-required-">updated_at : Date
+    <br/>updated_at
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">mostCommonValue : Integer
-	  <br/>Most common value
+  <li class="param-required-">product_url : String
+    <br/>product_url
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">mostCommonUnit : String
-	  <br/>Most common unit
+  <li class="param-required-">image_url : String
+    <br/>image_url
+    
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">lastSource : Integer
-	  <br/>Last source
+  <li class="param-required-">price : Float
+    <br/>price
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">number_of_user_variables : Integer
+    <br/>number_of_user_variables
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">outcome : Boolean
+    <br/>outcome
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">minimum_recorded_value : Float
+    <br/>minimum_recorded_value
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">maximum_recorded_value : Float
+    <br/>maximum_recorded_value
+    
   </li>
 </ul>
   

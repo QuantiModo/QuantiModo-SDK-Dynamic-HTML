@@ -1,5 +1,5 @@
 
-<h2>Correlation</h2>
+<h2>AggregatedCorrelation</h2>
   
 <ul class="parameter">
   <li class="param-required-">id : Integer
@@ -9,134 +9,127 @@
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">timestamp : Integer
-    <br/>Time at which correlation was calculated
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
-  <li class="param-required-true">user_id : Integer
-    <br/>ID of user that owns this correlation
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
   <li class="param-required-true">correlation : Float
-    <br/>Pearson correlation coefficient between cause and effect measurements
+    <br/>correlation
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">cause_id : Integer
-    <br/>variable ID of the cause variable for which the user desires correlations
+    <br/>cause_id
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">effect_id : Integer
-    <br/>variable ID of the effect variable for which the user desires correlations
+    <br/>effect_id
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">onset_delay : Integer
-    <br/>User estimated or default time after cause measurement before a perceivable effect is observed
+    <br/>onset_delay
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">duration_of_action : Integer
-    <br/>Time over which the cause is expected to produce a perceivable effect following the onset delay
+    <br/>duration_of_action
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">number_of_pairs : Integer
-    <br/>Number of points that went into the correlation calculation
+    <br/>number_of_pairs
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">value_predicting_high_outcome : Float
-    <br/>cause value that predicts an above average effect value (in default unit for cause variable)
+    <br/>value_predicting_high_outcome
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">value_predicting_low_outcome : Float
-    <br/>cause value that predicts a below average effect value (in default unit for cause variable)
+    <br/>value_predicting_low_outcome
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">optimal_pearson_product : Float
-    <br/>Optimal Pearson Product
+    <br/>optimal_pearson_product
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">vote : Float
-    <br/>Vote
+    <br/>vote
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">number_of_users : Integer
+    <br/>number_of_users
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">number_of_correlations : Integer
+    <br/>number_of_correlations
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">statistical_significance : Float
-    <br/>A function of the effect size and sample size
+    <br/>statistical_significance
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">cause_unit : String
-    <br/>Unit of Cause
+    <br/>cause_unit
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">cause_unit_id : Integer
-    <br/>Unit ID of Cause
+    <br/>cause_unit_id
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">cause_changes : Integer
-    <br/>Cause changes
+    <br/>cause_changes
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">effect_changes : Integer
-    <br/>Effect changes
+    <br/>effect_changes
     
   </li>
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-true">qm_score : Float
-    <br/>QM Score
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
-  <li class="param-required-true">error : String
-    <br/>error
+  <li class="param-required-true">aggregate_qm_score : Float
+    <br/>aggregate_qm_score
     
   </li>
 </ul>
@@ -156,15 +149,36 @@
 </ul>
   
 <ul class="parameter">
+  <li class="param-required-true">status : String
+    <br/>status
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">error_message : String
+    <br/>error_message
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">last_successful_update_time : Date
+    <br/>last_successful_update_time
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
   <li class="param-required-true">reverse_pearson_correlation_coefficient : Float
-    <br/>Correlation when cause and effect are reversed. For any causal relationship, the forward correlation should exceed the reverse correlation
+    <br/>reverse_pearson_correlation_coefficient
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">predictive_pearson_correlation_coefficient : Float
-    <br/>Predictive Pearson Correlation Coefficient
+    <br/>predictive_pearson_correlation_coefficient
     
   </li>
 </ul>

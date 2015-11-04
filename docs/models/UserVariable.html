@@ -1,0 +1,367 @@
+
+<h2>UserVariable</h2>
+  
+<ul class="parameter">
+  <li class="param-required-">parent_id : Integer
+    <br/>ID of the parent variable if this variable has any parent
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">client_id : String
+    <br/>client_id
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-true">variable_id : Integer
+    <br/>ID of variable
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">default_unit_id : Integer
+    <br/>ID of unit to use for this variable
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">minimum_allowed_value : Float
+    <br/>Minimum reasonable value for this variable (uses default unit)
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">maximum_allowed_value : Float
+    <br/>Maximum reasonable value for this variable (uses default unit)
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">filling_value : Float
+    <br/>Value for replacing null measurements
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">join_with : Integer
+    <br/>The Variable this Variable should be joined with. If the variable is joined with some other variable then it is not shown to user in the list of variables
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">onset_delay : Integer
+    <br/>How long it takes for a measurement in this variable to take effect
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">duration_of_action : Integer
+    <br/>Estimated duration of time following the onset delay in which a stimulus produces a perceivable effect
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">variable_category_id : Integer
+    <br/>ID of variable category
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">updated : Integer
+    <br/>updated
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">public : Integer
+    <br/>Is variable public
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">cause_only : Boolean
+    <br/>A value of 1 indicates that this variable is generally a cause in a causal relationship.  An example of a causeOnly variable would be a variable such as Cloud Cover which would generally not be influenced by the behaviour of the user
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">filling_type : String
+    <br/>0 -&gt; No filling, 1 -&gt; Use filling-value
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">number_of_measurements : Integer
+    <br/>Number of measurements
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">number_of_processed_measurements : Integer
+    <br/>Number of processed measurements
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">measurements_at_last_analysis : Integer
+    <br/>Number of measurements at last analysis
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">last_unit_id : Integer
+    <br/>ID of last Unit
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">last_original_unit_id : Integer
+    <br/>ID of last original Unit
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">last_value : Float
+    <br/>Last Value
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">last_original_value : Integer
+    <br/>Last original value which is stored
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">last_source_id : Integer
+    <br/>ID of last source
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">number_of_correlations : Integer
+    <br/>Number of correlations for this variable
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">status : String
+    <br/>status
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">error_message : String
+    <br/>error_message
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">last_successful_update_time : Date
+    <br/>When this variable or its settings were last updated
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">standard_deviation : Float
+    <br/>Standard deviation
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">variance : Float
+    <br/>Variance
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">minimum_recorded_daily_value : Float
+    <br/>Minimum recorded daily value of this variable
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">maximum_recorded_daily_value : Float
+    <br/>Maximum recorded daily value of this variable
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">mean : Float
+    <br/>Mean
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">median : Float
+    <br/>Median
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">most_common_unit_id : Integer
+    <br/>Most common Unit ID
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">most_common_value : Float
+    <br/>Most common value
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">number_of_unique_daily_values : Float
+    <br/>Number of unique daily values
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">number_of_changes : Integer
+    <br/>Number of changes
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">skewness : Float
+    <br/>Skewness
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">kurtosis : Float
+    <br/>Kurtosis
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">latitude : Float
+    <br/>Latitude
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">longitude : Float
+    <br/>Longitude
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">location : String
+    <br/>Location
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">created_at : Date
+    <br/>created_at
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">updated_at : Date
+    <br/>updated_at
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">outcome : Boolean
+    <br/>Outcome variables (those with `outcome` == 1) are variables for which a human would generally want to identify the influencing factors.  These include symptoms of illness, physique, mood, cognitive performance, etc.  Generally correlation calculations are only performed on outcome variables
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">sources : String
+    <br/>Comma-separated list of source names to limit variables to those sources
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">earliest_source_time : Integer
+    <br/>Earliest source time
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">latest_source_time : Integer
+    <br/>Latest source time
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">earliest_measurement_time : Integer
+    <br/>Earliest measurement time
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">latest_measurement_time : Integer
+    <br/>Latest measurement time
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">earliest_filling_time : Integer
+    <br/>Earliest filling time
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">latest_filling_time : Integer
+    <br/>Latest filling time
+    
+  </li>
+</ul>
+  
