@@ -4,16 +4,16 @@
 
   
   
-  <h2><a name="measurementsGet"></a>measurementsGet</h2>
+  <h2><a name="commonVariableRelationshipsGet"></a>commonVariableRelationshipsGet</h2>
   <hr>
   <p></p>
-  <p>Measurements are any value that can be recorded like daily steps, a mood rating, or apples eaten.</p>
+  <p>Get all CommonVariableRelationships</p>
   <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements</code>
+  <code>https://app.quantimo.do/api/v2/commonVariableRelationships</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
-  <div class="model" data-model="inline_response_200_5"><a href="">inline_response_200_5</a></div>
+  <div class="model" data-model="inline_response_200_12"><a href="">inline_response_200_12</a></div>
   <h3 class="section">Parameters</h3>
   <ul>
   	
@@ -35,10 +35,10 @@
       
       
       
-      <span class="param-name">user_id</span>
+      <span class="param-name">id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">ID of user that owns this measurement</p>
+      <p class="param-description">id</p>
 	  </li>
     
 	  <li class="parameter">
@@ -47,10 +47,10 @@
       
       
       
-      <span class="param-name">client_id</span>
+      <span class="param-name">confidence_level</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">The ID of the client application which originally stored the measurement</p>
+      <p class="param-description">Our confidence that a consistent predictive relationship exists based on the amount of evidence, reproducibility, and other factors</p>
 	  </li>
     
 	  <li class="parameter">
@@ -59,58 +59,10 @@
       
       
       
-      <span class="param-name">connector_id</span>
-      <span class="param-type">Integer</span>
-      
-      <p class="param-description">The id for the connector data source from which the measurement was obtained</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">variable_id</span>
-      <span class="param-type">Integer</span>
-      
-      <p class="param-description">ID of the variable for which we are creating the measurement records</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">source_id</span>
-      <span class="param-type">Integer</span>
-      
-      <p class="param-description">Application or device used to record the measurement values</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">start_time</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">start time for the measurement event. Use ISO 8601 datetime format</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">value</span>
+      <span class="param-name">confidence_score</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">The value of the measurement after conversion to the default unit for that variable</p>
+      <p class="param-description">A quantitative representation of our confidence that a consistent predictive relationship exists based on the amount of evidence, reproducibility, and other factors</p>
 	  </li>
     
 	  <li class="parameter">
@@ -119,10 +71,22 @@
       
       
       
-      <span class="param-name">unit_id</span>
+      <span class="param-name">direction</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Direction is positive if higher predictor values generally precede higher outcome values. Direction is negative if higher predictor values generally precede lower outcome values.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">duration_of_action</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">The default unit id for the variable</p>
+      <p class="param-description">Estimated number of seconds following the onset delay in which a stimulus produces a perceivable effect</p>
 	  </li>
     
 	  <li class="parameter">
@@ -131,10 +95,10 @@
       
       
       
-      <span class="param-name">original_value</span>
-      <span class="param-type">BigDecimal</span>
+      <span class="param-name">error_message</span>
+      <span class="param-type">String</span>
       
-      <p class="param-description">Unconverted value of measurement as originally posted (before conversion to default unit)</p>
+      <p class="param-description">error_message</p>
 	  </li>
     
 	  <li class="parameter">
@@ -143,10 +107,10 @@
       
       
       
-      <span class="param-name">original_unit_id</span>
+      <span class="param-name">onset_delay</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">Unit id of the measurement as originally submitted</p>
+      <p class="param-description">Estimated number of seconds that pass before a stimulus produces a perceivable effect</p>
 	  </li>
     
 	  <li class="parameter">
@@ -155,10 +119,10 @@
       
       
       
-      <span class="param-name">duration</span>
+      <span class="param-name">outcome_variable_id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">Duration of the event being measurement in seconds</p>
+      <p class="param-description">Variable ID for the outcome variable</p>
 	  </li>
     
 	  <li class="parameter">
@@ -167,10 +131,10 @@
       
       
       
-      <span class="param-name">note</span>
-      <span class="param-type">String</span>
+      <span class="param-name">predictor_variable_id</span>
+      <span class="param-type">Integer</span>
       
-      <p class="param-description">An optional note the user may include with their measurement</p>
+      <p class="param-description">Variable ID for the predictor variable</p>
 	  </li>
     
 	  <li class="parameter">
@@ -179,10 +143,22 @@
       
       
       
-      <span class="param-name">latitude</span>
+      <span class="param-name">predictor_unit_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">ID for default unit of the predictor variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sinn_rank</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">Latitude at which the measurement was taken</p>
+      <p class="param-description">A value representative of the relevance of this predictor relative to other predictors of this outcome.  Usually used for relevancy sorting.</p>
 	  </li>
     
 	  <li class="parameter">
@@ -191,10 +167,10 @@
       
       
       
-      <span class="param-name">longitude</span>
+      <span class="param-name">strength_score</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">Longitude at which the measurement was taken</p>
+      <p class="param-description">A value represented to the size of the effect which the predictor appears to have on the outcome.</p>
 	  </li>
     
 	  <li class="parameter">
@@ -203,10 +179,10 @@
       
       
       
-      <span class="param-name">location</span>
+      <span class="param-name">strength_level</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">Optional human readable name for the location where the measurement was recorded</p>
+      <p class="param-description">Can be weak, medium, or strong based on the size of the effect which the predictor appears to have on the outcome relative to other variable relationship strength scores.</p>
 	  </li>
     
 	  <li class="parameter">
@@ -215,10 +191,10 @@
       
       
       
-      <span class="param-name">created_at</span>
-      <span class="param-type">String</span>
+      <span class="param-name">up_votes</span>
+      <span class="param-type">Integer</span>
       
-      <p class="param-description">When the record was first created. Use ISO 8601 datetime format</p>
+      <p class="param-description">Number of users who feel that there is a plausible causal relationship between the predictor and outcome variables.</p>
 	  </li>
     
 	  <li class="parameter">
@@ -227,10 +203,10 @@
       
       
       
-      <span class="param-name">updated_at</span>
-      <span class="param-type">String</span>
+      <span class="param-name">down_votes</span>
+      <span class="param-type">Integer</span>
       
-      <p class="param-description">When the record was last updated. Use ISO 8601 datetime format</p>
+      <p class="param-description">Number of users who do not feel that there is a plausible causal relationship between the predictor and outcome variables.</p>
 	  </li>
     
 	  <li class="parameter">
@@ -239,10 +215,46 @@
       
       
       
-      <span class="param-name">error</span>
+      <span class="param-name">value_predicting_high_outcome</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Value for the predictor variable (in it&#39;s default unit) which typically precedes an above average outcome value</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">value_predicting_low_outcome</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Value for the predictor variable (in it&#39;s default unit) which typically precedes a below average outcome value</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">number_of_users</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Number of users whose data was aggregated to obtain this relationship</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">data_source</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">An error message if there is a problem with the measurement</p>
+      <p class="param-description">data_source</p>
 	  </li>
     
 	  <li class="parameter">
@@ -283,16 +295,16 @@
     
   </ul>
   
-  <h2><a name="measurementsPost"></a>measurementsPost</h2>
+  <h2><a name="commonVariableRelationshipsPost"></a>commonVariableRelationshipsPost</h2>
   <hr>
   <p></p>
-  <p>You can submit or update multiple measurements in a measurements sub-array.  If the variable these measurements correspond to does not already exist in the database, it will be automatically added.</p>
+  <p>Store CommonVariableRelationship</p>
   <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements</code>
+  <code>https://app.quantimo.do/api/v2/commonVariableRelationships</code>
   <h3 class="section">HTTP Method</h3>
   <code>POST</code>
   <h3 class="section">Response Type</h3>
-  <div class="model" data-model="inline_response_200_5"><a href="">inline_response_200_5</a></div>
+  <div class="model" data-model="inline_response_200_13"><a href="">inline_response_200_13</a></div>
   <h3 class="section">Parameters</h3>
   <ul>
   	
@@ -315,77 +327,23 @@
       
       <span class="param-in">Body: </span>
       <span class="param-name">body</span>
-      <span class="param-type">MeasurementPost</span>
+      <span class="param-type">CommonVariableRelationship</span>
       
-      <p class="param-description">Measurement that should be stored</p>
+      <p class="param-description">CommonVariableRelationship that should be stored</p>
 	  </li>
     
   </ul>
   
-  <h2><a name="measurementsCsvGet"></a>measurementsCsvGet</h2>
+  <h2><a name="commonVariableRelationshipsIdGet"></a>commonVariableRelationshipsIdGet</h2>
   <hr>
   <p></p>
-  <p>Download a CSV containing all user measurements</p>
+  <p>Get CommonVariableRelationship</p>
   <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements/csv</code>
+  <code>https://app.quantimo.do/api/v2/commonVariableRelationships/{id}</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
-  <div class="model" data-model="file"><a href="">file</a></div>
-  <h3 class="section">Parameters</h3>
-  <ul>
-  	
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">access_token</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">User&#39;s OAuth2 access token</p>
-	  </li>
-    
-  </ul>
-  
-  <h2><a name="measurementsRequestCsvPost"></a>measurementsRequestCsvPost</h2>
-  <hr>
-  <p></p>
-  <p>Use this endpoint to schedule a CSV export containing all user measurements to be emailed to the user within 24 hours.</p>
-  <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements/request_csv</code>
-  <h3 class="section">HTTP Method</h3>
-  <code>POST</code>
-  <h3 class="section">Response Type</h3>
-  <div class="model" data-model="integer"><a href="">Integer</a></div>
-  <h3 class="section">Parameters</h3>
-  <ul>
-  	
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">access_token</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">User&#39;s OAuth2 access token</p>
-	  </li>
-    
-  </ul>
-  
-  <h2><a name="measurementsIdGet"></a>measurementsIdGet</h2>
-  <hr>
-  <p></p>
-  <p>Get Measurement</p>
-  <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements/{id}</code>
-  <h3 class="section">HTTP Method</h3>
-  <code>GET</code>
-  <h3 class="section">Response Type</h3>
-  <div class="model" data-model="inline_response_200_20"><a href="">inline_response_200_20</a></div>
+  <div class="model" data-model="inline_response_200_13"><a href="">inline_response_200_13</a></div>
   <h3 class="section">Parameters</h3>
   <ul>
   	
@@ -398,7 +356,7 @@
       <span class="param-name">id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">id of Measurement</p>
+      <p class="param-description">id of CommonVariableRelationship</p>
 	  </li>
     
 	  <li class="parameter">
@@ -415,12 +373,12 @@
     
   </ul>
   
-  <h2><a name="measurementsIdPut"></a>measurementsIdPut</h2>
+  <h2><a name="commonVariableRelationshipsIdPut"></a>commonVariableRelationshipsIdPut</h2>
   <hr>
   <p></p>
-  <p>Update Measurement</p>
+  <p>Update CommonVariableRelationship</p>
   <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements/{id}</code>
+  <code>https://app.quantimo.do/api/v2/commonVariableRelationships/{id}</code>
   <h3 class="section">HTTP Method</h3>
   <code>PUT</code>
   <h3 class="section">Response Type</h3>
@@ -437,7 +395,7 @@
       <span class="param-name">id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">id of Measurement</p>
+      <p class="param-description">id of CommonVariableRelationship</p>
 	  </li>
     
 	  <li class="parameter">
@@ -459,19 +417,19 @@
       
       <span class="param-in">Body: </span>
       <span class="param-name">body</span>
-      <span class="param-type">Measurement</span>
+      <span class="param-type">CommonVariableRelationship</span>
       
-      <p class="param-description">Measurement that should be updated</p>
+      <p class="param-description">CommonVariableRelationship that should be updated</p>
 	  </li>
     
   </ul>
   
-  <h2><a name="measurementsIdDelete"></a>measurementsIdDelete</h2>
+  <h2><a name="commonVariableRelationshipsIdDelete"></a>commonVariableRelationshipsIdDelete</h2>
   <hr>
   <p></p>
-  <p>Delete Measurement</p>
+  <p>Delete CommonVariableRelationship</p>
   <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements/{id}</code>
+  <code>https://app.quantimo.do/api/v2/commonVariableRelationships/{id}</code>
   <h3 class="section">HTTP Method</h3>
   <code>DELETE</code>
   <h3 class="section">Response Type</h3>
@@ -488,7 +446,7 @@
       <span class="param-name">id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">id of Measurement</p>
+      <p class="param-description">id of CommonVariableRelationship</p>
 	  </li>
     
 	  <li class="parameter">

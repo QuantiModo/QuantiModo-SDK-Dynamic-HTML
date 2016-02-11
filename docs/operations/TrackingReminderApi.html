@@ -4,16 +4,16 @@
 
   
   
-  <h2><a name="measurementsGet"></a>measurementsGet</h2>
+  <h2><a name="trackingRemindersGet"></a>trackingRemindersGet</h2>
   <hr>
   <p></p>
-  <p>Measurements are any value that can be recorded like daily steps, a mood rating, or apples eaten.</p>
+  <p>Users can be reminded to track certain variables at a specified frequency with a default value.</p>
   <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements</code>
+  <code>https://app.quantimo.do/api/v2/trackingReminders</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
-  <div class="model" data-model="inline_response_200_5"><a href="">inline_response_200_5</a></div>
+  <div class="model" data-model="inline_response_200_6"><a href="">inline_response_200_6</a></div>
   <h3 class="section">Parameters</h3>
   <ul>
   	
@@ -35,22 +35,10 @@
       
       
       
-      <span class="param-name">user_id</span>
-      <span class="param-type">Integer</span>
-      
-      <p class="param-description">ID of user that owns this measurement</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
       <span class="param-name">client_id</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">The ID of the client application which originally stored the measurement</p>
+      <p class="param-description">The ID of the client application which last created or updated this tracking reminder</p>
 	  </li>
     
 	  <li class="parameter">
@@ -59,10 +47,10 @@
       
       
       
-      <span class="param-name">connector_id</span>
+      <span class="param-name">user_id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">The id for the connector data source from which the measurement was obtained</p>
+      <p class="param-description">ID of the user who created a reminder</p>
 	  </li>
     
 	  <li class="parameter">
@@ -74,7 +62,7 @@
       <span class="param-name">variable_id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">ID of the variable for which we are creating the measurement records</p>
+      <p class="param-description">Id for the variable to be tracked</p>
 	  </li>
     
 	  <li class="parameter">
@@ -83,10 +71,10 @@
       
       
       
-      <span class="param-name">source_id</span>
-      <span class="param-type">Integer</span>
+      <span class="param-name">pop_up</span>
+      <span class="param-type">Boolean</span>
       
-      <p class="param-description">Application or device used to record the measurement values</p>
+      <p class="param-description">True if the reminders should appear as a popup notification</p>
 	  </li>
     
 	  <li class="parameter">
@@ -95,10 +83,46 @@
       
       
       
-      <span class="param-name">start_time</span>
+      <span class="param-name">sms</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">True if the reminders should be delivered via SMS</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">email</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">True if the reminders should be delivered via email</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">notification_bar</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">True if the reminders should appear in the notification bar</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">last_reminded</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">start time for the measurement event. Use ISO 8601 datetime format</p>
+      <p class="param-description">ISO 8601 timestamp for the last time a reminder was sent</p>
 	  </li>
     
 	  <li class="parameter">
@@ -107,106 +131,10 @@
       
       
       
-      <span class="param-name">value</span>
-      <span class="param-type">BigDecimal</span>
-      
-      <p class="param-description">The value of the measurement after conversion to the default unit for that variable</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">unit_id</span>
-      <span class="param-type">Integer</span>
-      
-      <p class="param-description">The default unit id for the variable</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">original_value</span>
-      <span class="param-type">BigDecimal</span>
-      
-      <p class="param-description">Unconverted value of measurement as originally posted (before conversion to default unit)</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">original_unit_id</span>
-      <span class="param-type">Integer</span>
-      
-      <p class="param-description">Unit id of the measurement as originally submitted</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">duration</span>
-      <span class="param-type">Integer</span>
-      
-      <p class="param-description">Duration of the event being measurement in seconds</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">note</span>
+      <span class="param-name">last_tracked</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">An optional note the user may include with their measurement</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">latitude</span>
-      <span class="param-type">BigDecimal</span>
-      
-      <p class="param-description">Latitude at which the measurement was taken</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">longitude</span>
-      <span class="param-type">BigDecimal</span>
-      
-      <p class="param-description">Longitude at which the measurement was taken</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">location</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">Optional human readable name for the location where the measurement was recorded</p>
+      <p class="param-description">ISO 8601 timestamp for the last time a measurement was received for this user and variable</p>
 	  </li>
     
 	  <li class="parameter">
@@ -231,18 +159,6 @@
       <span class="param-type">String</span>
       
       <p class="param-description">When the record was last updated. Use ISO 8601 datetime format</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">error</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">An error message if there is a problem with the measurement</p>
 	  </li>
     
 	  <li class="parameter">
@@ -283,16 +199,16 @@
     
   </ul>
   
-  <h2><a name="measurementsPost"></a>measurementsPost</h2>
+  <h2><a name="trackingRemindersPost"></a>trackingRemindersPost</h2>
   <hr>
   <p></p>
-  <p>You can submit or update multiple measurements in a measurements sub-array.  If the variable these measurements correspond to does not already exist in the database, it will be automatically added.</p>
+  <p>This is to enable users to indicate their opinion on the plausibility of a causal relationship between a treatment and outcome. QuantiModo incorporates crowd-sourced plausibility estimations into their algorithm. This is done allowing user to indicate their view of the plausibility of each relationship with thumbs up/down buttons placed next to each prediction.</p>
   <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements</code>
+  <code>https://app.quantimo.do/api/v2/trackingReminders</code>
   <h3 class="section">HTTP Method</h3>
   <code>POST</code>
   <h3 class="section">Response Type</h3>
-  <div class="model" data-model="inline_response_200_5"><a href="">inline_response_200_5</a></div>
+  <div class="model" data-model="inline_response_200_23"><a href="">inline_response_200_23</a></div>
   <h3 class="section">Parameters</h3>
   <ul>
   	
@@ -315,77 +231,23 @@
       
       <span class="param-in">Body: </span>
       <span class="param-name">body</span>
-      <span class="param-type">MeasurementPost</span>
+      <span class="param-type">TrackingReminder</span>
       
-      <p class="param-description">Measurement that should be stored</p>
+      <p class="param-description">TrackingReminder that should be stored</p>
 	  </li>
     
   </ul>
   
-  <h2><a name="measurementsCsvGet"></a>measurementsCsvGet</h2>
+  <h2><a name="trackingRemindersIdGet"></a>trackingRemindersIdGet</h2>
   <hr>
   <p></p>
-  <p>Download a CSV containing all user measurements</p>
+  <p>Get TrackingReminder</p>
   <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements/csv</code>
+  <code>https://app.quantimo.do/api/v2/trackingReminders/{id}</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
-  <div class="model" data-model="file"><a href="">file</a></div>
-  <h3 class="section">Parameters</h3>
-  <ul>
-  	
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">access_token</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">User&#39;s OAuth2 access token</p>
-	  </li>
-    
-  </ul>
-  
-  <h2><a name="measurementsRequestCsvPost"></a>measurementsRequestCsvPost</h2>
-  <hr>
-  <p></p>
-  <p>Use this endpoint to schedule a CSV export containing all user measurements to be emailed to the user within 24 hours.</p>
-  <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements/request_csv</code>
-  <h3 class="section">HTTP Method</h3>
-  <code>POST</code>
-  <h3 class="section">Response Type</h3>
-  <div class="model" data-model="integer"><a href="">Integer</a></div>
-  <h3 class="section">Parameters</h3>
-  <ul>
-  	
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">access_token</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">User&#39;s OAuth2 access token</p>
-	  </li>
-    
-  </ul>
-  
-  <h2><a name="measurementsIdGet"></a>measurementsIdGet</h2>
-  <hr>
-  <p></p>
-  <p>Get Measurement</p>
-  <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements/{id}</code>
-  <h3 class="section">HTTP Method</h3>
-  <code>GET</code>
-  <h3 class="section">Response Type</h3>
-  <div class="model" data-model="inline_response_200_20"><a href="">inline_response_200_20</a></div>
+  <div class="model" data-model="inline_response_200_23"><a href="">inline_response_200_23</a></div>
   <h3 class="section">Parameters</h3>
   <ul>
   	
@@ -398,7 +260,7 @@
       <span class="param-name">id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">id of Measurement</p>
+      <p class="param-description">id of TrackingReminder</p>
 	  </li>
     
 	  <li class="parameter">
@@ -415,12 +277,12 @@
     
   </ul>
   
-  <h2><a name="measurementsIdPut"></a>measurementsIdPut</h2>
+  <h2><a name="trackingRemindersIdPut"></a>trackingRemindersIdPut</h2>
   <hr>
   <p></p>
-  <p>Update Measurement</p>
+  <p>Update TrackingReminder</p>
   <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements/{id}</code>
+  <code>https://app.quantimo.do/api/v2/trackingReminders/{id}</code>
   <h3 class="section">HTTP Method</h3>
   <code>PUT</code>
   <h3 class="section">Response Type</h3>
@@ -437,7 +299,7 @@
       <span class="param-name">id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">id of Measurement</p>
+      <p class="param-description">id of TrackingReminder</p>
 	  </li>
     
 	  <li class="parameter">
@@ -459,19 +321,19 @@
       
       <span class="param-in">Body: </span>
       <span class="param-name">body</span>
-      <span class="param-type">Measurement</span>
+      <span class="param-type">TrackingReminder</span>
       
-      <p class="param-description">Measurement that should be updated</p>
+      <p class="param-description">TrackingReminder that should be updated</p>
 	  </li>
     
   </ul>
   
-  <h2><a name="measurementsIdDelete"></a>measurementsIdDelete</h2>
+  <h2><a name="trackingRemindersIdDelete"></a>trackingRemindersIdDelete</h2>
   <hr>
   <p></p>
-  <p>Delete Measurement</p>
+  <p>Delete previously posted trackingReminder</p>
   <h3 class="section">URL</h3>
-  <code>https://app.quantimo.do/api/v2/measurements/{id}</code>
+  <code>https://app.quantimo.do/api/v2/trackingReminders/{id}</code>
   <h3 class="section">HTTP Method</h3>
   <code>DELETE</code>
   <h3 class="section">Response Type</h3>
@@ -488,7 +350,7 @@
       <span class="param-name">id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">id of Measurement</p>
+      <p class="param-description">id of TrackingReminder</p>
 	  </li>
     
 	  <li class="parameter">

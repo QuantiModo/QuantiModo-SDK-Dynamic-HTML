@@ -13,10 +13,22 @@
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
-  <div class="model" data-model="inline_response_200_27"><a href="">inline_response_200_27</a></div>
+  <div class="model" data-model="inline_response_200_34"><a href="">inline_response_200_34</a></div>
   <h3 class="section">Parameters</h3>
   <ul>
   	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
+	  </li>
+    
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -38,7 +50,7 @@
       <span class="param-name">client_id</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">client_id</p>
+      <p class="param-description">The ID of the client application which last created or updated this common variable</p>
 	  </li>
     
 	  <li class="parameter">
@@ -50,7 +62,7 @@
       <span class="param-name">parent_id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">parent_id</p>
+      <p class="param-description">ID of the parent variable if this variable has any parent</p>
 	  </li>
     
 	  <li class="parameter">
@@ -62,7 +74,7 @@
       <span class="param-name">name</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">name</p>
+      <p class="param-description">User-defined variable display name</p>
 	  </li>
     
 	  <li class="parameter">
@@ -74,7 +86,7 @@
       <span class="param-name">variable_category_id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">variable_category_id</p>
+      <p class="param-description">Variable category ID</p>
 	  </li>
     
 	  <li class="parameter">
@@ -86,7 +98,7 @@
       <span class="param-name">default_unit_id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">default_unit_id</p>
+      <p class="param-description">ID of the default unit for the variable</p>
 	  </li>
     
 	  <li class="parameter">
@@ -98,7 +110,7 @@
       <span class="param-name">combination_operation</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">combination_operation</p>
+      <p class="param-description">How to combine values of this variable (for instance, to see a summary of the values over a month) SUM or MEAN</p>
 	  </li>
     
 	  <li class="parameter">
@@ -110,7 +122,7 @@
       <span class="param-name">filling_value</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">filling_value</p>
+      <p class="param-description">Value for replacing null measurements</p>
 	  </li>
     
 	  <li class="parameter">
@@ -122,7 +134,7 @@
       <span class="param-name">maximum_allowed_value</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">maximum_allowed_value</p>
+      <p class="param-description">Maximum reasonable value for this variable (uses default unit)</p>
 	  </li>
     
 	  <li class="parameter">
@@ -134,7 +146,7 @@
       <span class="param-name">minimum_allowed_value</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">minimum_allowed_value</p>
+      <p class="param-description">Minimum reasonable value for this variable (uses default unit)</p>
 	  </li>
     
 	  <li class="parameter">
@@ -146,7 +158,7 @@
       <span class="param-name">onset_delay</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">onset_delay</p>
+      <p class="param-description">Estimated number of seconds that pass before a stimulus produces a perceivable effect</p>
 	  </li>
     
 	  <li class="parameter">
@@ -158,7 +170,7 @@
       <span class="param-name">duration_of_action</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">duration_of_action</p>
+      <p class="param-description">Estimated number of seconds following the onset delay in which a stimulus produces a perceivable effect</p>
 	  </li>
     
 	  <li class="parameter">
@@ -170,7 +182,7 @@
       <span class="param-name">public</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">public</p>
+      <p class="param-description">Is variable public</p>
 	  </li>
     
 	  <li class="parameter">
@@ -182,7 +194,7 @@
       <span class="param-name">cause_only</span>
       <span class="param-type">Boolean</span>
       
-      <p class="param-description">cause_only</p>
+      <p class="param-description">A value of 1 indicates that this variable is generally a cause in a causal relationship.  An example of a causeOnly variable would be a variable such as Cloud Cover which would generally not be influenced by the behaviour of the user</p>
 	  </li>
     
 	  <li class="parameter">
@@ -194,7 +206,7 @@
       <span class="param-name">most_common_value</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">most_common_value</p>
+      <p class="param-description">Most common value</p>
 	  </li>
     
 	  <li class="parameter">
@@ -206,7 +218,7 @@
       <span class="param-name">most_common_unit_id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">most_common_unit_id</p>
+      <p class="param-description">Most common Unit</p>
 	  </li>
     
 	  <li class="parameter">
@@ -218,7 +230,7 @@
       <span class="param-name">standard_deviation</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">standard_deviation</p>
+      <p class="param-description">Standard Deviation</p>
 	  </li>
     
 	  <li class="parameter">
@@ -230,7 +242,7 @@
       <span class="param-name">variance</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">variance</p>
+      <p class="param-description">Average variance for this variable based on all user data</p>
 	  </li>
     
 	  <li class="parameter">
@@ -242,7 +254,7 @@
       <span class="param-name">mean</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">mean</p>
+      <p class="param-description">Mean for this variable based on all user data</p>
 	  </li>
     
 	  <li class="parameter">
@@ -254,7 +266,7 @@
       <span class="param-name">median</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">median</p>
+      <p class="param-description">Median for this variable based on all user data</p>
 	  </li>
     
 	  <li class="parameter">
@@ -266,7 +278,7 @@
       <span class="param-name">number_of_measurements</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">number_of_measurements</p>
+      <p class="param-description">Number of measurements for this variable based on all user data</p>
 	  </li>
     
 	  <li class="parameter">
@@ -278,7 +290,7 @@
       <span class="param-name">number_of_unique_values</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">number_of_unique_values</p>
+      <p class="param-description">Number of unique values for this variable based on all user data</p>
 	  </li>
     
 	  <li class="parameter">
@@ -290,7 +302,7 @@
       <span class="param-name">skewness</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">skewness</p>
+      <p class="param-description">Skewness for this variable based on all user data</p>
 	  </li>
     
 	  <li class="parameter">
@@ -302,43 +314,7 @@
       <span class="param-name">kurtosis</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">kurtosis</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">latitude</span>
-      <span class="param-type">BigDecimal</span>
-      
-      <p class="param-description">latitude</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">longitude</span>
-      <span class="param-type">BigDecimal</span>
-      
-      <p class="param-description">longitude</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">location</span>
-      <span class="param-type">String</span>
-      
-      <p class="param-description">location</p>
+      <p class="param-description">Kurtosis for this variable based on all user data</p>
 	  </li>
     
 	  <li class="parameter">
@@ -374,7 +350,7 @@
       <span class="param-name">last_successful_update_time</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">last_successful_update_time</p>
+      <p class="param-description">When this variable or its settings were last updated</p>
 	  </li>
     
 	  <li class="parameter">
@@ -386,7 +362,7 @@
       <span class="param-name">created_at</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">created_at</p>
+      <p class="param-description">When the record was first created. Use ISO 8601 datetime format</p>
 	  </li>
     
 	  <li class="parameter">
@@ -398,7 +374,7 @@
       <span class="param-name">updated_at</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">updated_at</p>
+      <p class="param-description">When the record was last updated. Use ISO 8601 datetime format</p>
 	  </li>
     
 	  <li class="parameter">
@@ -410,7 +386,7 @@
       <span class="param-name">product_url</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">product_url</p>
+      <p class="param-description">Product URL</p>
 	  </li>
     
 	  <li class="parameter">
@@ -422,7 +398,7 @@
       <span class="param-name">image_url</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">image_url</p>
+      <p class="param-description">Image URL</p>
 	  </li>
     
 	  <li class="parameter">
@@ -434,7 +410,7 @@
       <span class="param-name">price</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">price</p>
+      <p class="param-description">Price</p>
 	  </li>
     
 	  <li class="parameter">
@@ -446,7 +422,7 @@
       <span class="param-name">number_of_user_variables</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">number_of_user_variables</p>
+      <p class="param-description">Number of users who have data for this variable</p>
 	  </li>
     
 	  <li class="parameter">
@@ -458,7 +434,7 @@
       <span class="param-name">outcome</span>
       <span class="param-type">Boolean</span>
       
-      <p class="param-description">outcome</p>
+      <p class="param-description">Outcome variables (those with `outcome` == 1) are variables for which a human would generally want to identify the influencing factors.  These include symptoms of illness, physique, mood, cognitive performance, etc.  Generally correlation calculations are only performed on outcome variables.</p>
 	  </li>
     
 	  <li class="parameter">
@@ -470,7 +446,7 @@
       <span class="param-name">minimum_recorded_value</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">minimum_recorded_value</p>
+      <p class="param-description">Minimum recorded value of this variable based on all user data</p>
 	  </li>
     
 	  <li class="parameter">
@@ -482,7 +458,7 @@
       <span class="param-name">maximum_recorded_value</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">maximum_recorded_value</p>
+      <p class="param-description">Maximum recorded value of this variable based on all user data</p>
 	  </li>
     
 	  <li class="parameter">
@@ -494,7 +470,7 @@
       <span class="param-name">limit</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">limit</p>
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.</p>
 	  </li>
     
 	  <li class="parameter">
@@ -506,7 +482,7 @@
       <span class="param-name">offset</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">offset</p>
+      <p class="param-description">OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.</p>
 	  </li>
     
 	  <li class="parameter">
@@ -518,7 +494,7 @@
       <span class="param-name">sort</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">sort</p>
+      <p class="param-description">Sort records by a given field name. If the field name is prefixed with &#39;-&#39;, it will sort in descending order.</p>
 	  </li>
     
   </ul>
@@ -526,16 +502,28 @@
   <h2><a name="variablesPost"></a>variablesPost</h2>
   <hr>
   <p></p>
-  <p>Store Variable</p>
+  <p>Allows the client to create a new variable in the `variables` table.</p>
   <h3 class="section">URL</h3>
   <code>https://app.quantimo.do/api/v2/variables</code>
   <h3 class="section">HTTP Method</h3>
   <code>POST</code>
   <h3 class="section">Response Type</h3>
-  <div class="model" data-model="inline_response_200_28"><a href="">inline_response_200_28</a></div>
+  <div class="model" data-model="inline_response_200_35"><a href="">inline_response_200_35</a></div>
   <h3 class="section">Parameters</h3>
   <ul>
   	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
+	  </li>
+    
 	  <li class="parameter">
       
       
@@ -559,7 +547,7 @@
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
-  <div class="model" data-model="inline_response_200_28"><a href="">inline_response_200_28</a></div>
+  <div class="model" data-model="inline_response_200_35"><a href="">inline_response_200_35</a></div>
   <h3 class="section">Parameters</h3>
   <ul>
   	
@@ -573,6 +561,18 @@
       <span class="param-type">Integer</span>
       
       <p class="param-description">id of Variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
 	  </li>
     
   </ul>
@@ -600,6 +600,18 @@
       <span class="param-type">Integer</span>
       
       <p class="param-description">id of Variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
 	  </li>
     
 	  <li class="parameter">
@@ -639,6 +651,18 @@
       <span class="param-type">Integer</span>
       
       <p class="param-description">id of Variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
 	  </li>
     
   </ul>

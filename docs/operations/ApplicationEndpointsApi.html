@@ -1,0 +1,2027 @@
+<div class="main-content">
+  <h2><a name=""></a></h2>
+  <p>This is the  API</p>
+
+  
+  
+  <h2><a name="applicationConnectionsGet"></a>applicationConnectionsGet</h2>
+  <hr>
+  <p></p>
+  <p>Get all Connections</p>
+  <h3 class="section">URL</h3>
+  <code>https://app.quantimo.do/api/v2/application/connections</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="inline_response_200_3"><a href="">inline_response_200_3</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Application&#39;s OAuth2 access token</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">connector_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The id for the connector data source for which the connection is connected</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">connect_status</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Indicates whether a connector is currently connected to a service for a user.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">connect_error</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Error message if there is a problem with authorizing this connection.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">update_requested_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Time at which an update was requested by a user.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">update_status</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Indicates whether a connector is currently updated.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">update_error</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Indicates if there was an error during the update.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">last_successful_updated_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The time at which the connector was last successfully updated.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">created_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was first created. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">updated_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was last updated. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">limit</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">offset</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sort</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Sort by given field. If the field is prefixed with &#39;-&#39;, it will sort in descending order.</p>
+	  </li>
+    
+  </ul>
+  
+  <h2><a name="applicationCredentialsGet"></a>applicationCredentialsGet</h2>
+  <hr>
+  <p></p>
+  <p>Get all Credentials</p>
+  <h3 class="section">URL</h3>
+  <code>https://app.quantimo.do/api/v2/application/credentials</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="inline_response_200_4"><a href="">inline_response_200_4</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Application&#39;s OAuth2 access token</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">connector_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The id for the connector data source from which the credential was obtained</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">attr_key</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Attribute name such as token, userid, username, or password</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">attr_value</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Encrypted value for the attribute specified</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">created_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was first created. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">updated_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was last updated. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">limit</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">offset</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sort</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Sort by given field. If the field is prefixed with &#39;-&#39;, it will sort in descending order.</p>
+	  </li>
+    
+  </ul>
+  
+  <h2><a name="applicationMeasurementsGet"></a>applicationMeasurementsGet</h2>
+  <hr>
+  <p></p>
+  <p>Measurements are any value that can be recorded like daily steps, a mood rating, or apples eaten.</p>
+  <h3 class="section">URL</h3>
+  <code>https://app.quantimo.do/api/v2/application/measurements</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="inline_response_200_5"><a href="">inline_response_200_5</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Application&#39;s OAuth2 access token</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">client_id</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The ID of the client application which originally stored the measurement</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">connector_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The id for the connector data source from which the measurement was obtained</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">variable_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">ID of the variable for which we are creating the measurement records</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">source_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Application or device used to record the measurement values</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">start_time</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">start time for the measurement event. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">value</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">The value of the measurement after conversion to the default unit for that variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">unit_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The default unit id for the variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">original_value</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Unconverted value of measurement as originally posted (before conversion to default unit)</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">original_unit_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Unit id of the measurement as originally submitted</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">duration</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Duration of the event being measurement in seconds</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">note</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">An optional note the user may include with their measurement</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">latitude</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Latitude at which the measurement was taken</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">longitude</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Longitude at which the measurement was taken</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">location</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Optional human readable name for the location where the measurement was recorded</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">created_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was first created. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">updated_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was last updated. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">error</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">An error message if there is a problem with the measurement</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">limit</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">offset</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sort</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Sort by given field. If the field is prefixed with &#39;-&#39;, it will sort in descending order.</p>
+	  </li>
+    
+  </ul>
+  
+  <h2><a name="applicationTrackingRemindersGet"></a>applicationTrackingRemindersGet</h2>
+  <hr>
+  <p></p>
+  <p>Get the variable id, frequency, and default value for the user tracking reminders</p>
+  <h3 class="section">URL</h3>
+  <code>https://app.quantimo.do/api/v2/application/trackingReminders</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="inline_response_200_6"><a href="">inline_response_200_6</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">client_id</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The ID of the client application which last created or updated this trackingReminder</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">created_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was first created. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">updated_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was last updated. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">limit</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">offset</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sort</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Sort by given field. If the field is prefixed with &#39;-&#39;, it will sort in descending order.</p>
+	  </li>
+    
+  </ul>
+  
+  <h2><a name="applicationUpdatesGet"></a>applicationUpdatesGet</h2>
+  <hr>
+  <p></p>
+  <p>Get all Updates</p>
+  <h3 class="section">URL</h3>
+  <code>https://app.quantimo.do/api/v2/application/updates</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="inline_response_200_7"><a href="">inline_response_200_7</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Application&#39;s OAuth2 access token</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">connector_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">connector_id</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">number_of_measurements</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">number_of_measurements</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">success</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">success</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">message</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">message</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">created_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was first created. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">updated_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was last updated. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">limit</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">offset</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sort</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Sort by given field. If the field is prefixed with &#39;-&#39;, it will sort in descending order.</p>
+	  </li>
+    
+  </ul>
+  
+  <h2><a name="applicationUserVariableRelationshipsGet"></a>applicationUserVariableRelationshipsGet</h2>
+  <hr>
+  <p></p>
+  <p>Get all UserVariableRelationships</p>
+  <h3 class="section">URL</h3>
+  <code>https://app.quantimo.do/api/v2/application/userVariableRelationships</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="inline_response_200_8"><a href="">inline_response_200_8</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">id</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">confidence_level</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Our confidence that a consistent predictive relationship exists based on the amount of evidence, reproducibility, and other factors</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">confidence_score</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">A quantitative representation of our confidence that a consistent predictive relationship exists based on the amount of evidence, reproducibility, and other factors</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">direction</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Direction is positive if higher predictor values generally precede higher outcome values. Direction is negative if higher predictor values generally precede lower outcome values.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">duration_of_action</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Estimated number of seconds following the onset delay in which a stimulus produces a perceivable effect</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">error_message</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">error_message</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">onset_delay</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Estimated number of seconds that pass before a stimulus produces a perceivable effect</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">outcome_variable_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Variable ID for the outcome variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">predictor_variable_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Variable ID for the predictor variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">predictor_unit_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">ID for default unit of the predictor variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sinn_rank</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">A value representative of the relevance of this predictor relative to other predictors of this outcome.  Usually used for relevancy sorting.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">strength_level</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Can be weak, medium, or strong based on the size of the effect which the predictor appears to have on the outcome relative to other variable relationship strength scores.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">strength_score</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">A value represented to the size of the effect which the predictor appears to have on the outcome.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">vote</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">vote</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">value_predicting_high_outcome</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Value for the predictor variable (in it&#39;s default unit) which typically precedes an above average outcome value</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">value_predicting_low_outcome</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Value for the predictor variable (in it&#39;s default unit) which typically precedes a below average outcome value</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">limit</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">offset</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sort</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Sort by given field. If the field is prefixed with &#39;-&#39;, it will sort in descending order.</p>
+	  </li>
+    
+  </ul>
+  
+  <h2><a name="applicationUserVariablesGet"></a>applicationUserVariablesGet</h2>
+  <hr>
+  <p></p>
+  <p>Get all UserVariables</p>
+  <h3 class="section">URL</h3>
+  <code>https://app.quantimo.do/api/v2/application/userVariables</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="inline_response_200_9"><a href="">inline_response_200_9</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">client_id</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The ID of the client application which last created or updated this user variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">parent_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">ID of the parent variable if this variable has any parent</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">variable_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">ID of variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">default_unit_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">D of unit to use for this variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">minimum_allowed_value</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Minimum reasonable value for this variable (uses default unit)</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">maximum_allowed_value</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Maximum reasonable value for this variable (uses default unit)</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">filling_value</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Value for replacing null measurements</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">join_with</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The Variable this Variable should be joined with. If the variable is joined with some other variable then it is not shown to user in the list of variables</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">onset_delay</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Estimated number of seconds that pass before a stimulus produces a perceivable effect</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">duration_of_action</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Estimated duration of time following the onset delay in which a stimulus produces a perceivable effect</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">variable_category_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">ID of variable category</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">updated</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">updated</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">public</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Is variable public</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">cause_only</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">A value of 1 indicates that this variable is generally a cause in a causal relationship.  An example of a causeOnly variable would be a variable such as Cloud Cover which would generally not be influenced by the behaviour of the user</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">filling_type</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">0 -&gt; No filling, 1 -&gt; Use filling-value</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">number_of_measurements</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Number of measurements</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">number_of_processed_measurements</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Number of processed measurements</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">measurements_at_last_analysis</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Number of measurements at last analysis</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">last_unit_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">ID of last Unit</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">last_original_unit_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">ID of last original Unit</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">last_original_value</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Last original value which is stored</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">last_value</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Last Value</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">last_original_value</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Last original value which is stored</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">last_source_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">ID of last source</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">number_of_correlations</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Number of correlations for this variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">status</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">status</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">error_message</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">error_message</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">last_successful_update_time</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When this variable or its settings were last updated</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">standard_deviation</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Standard deviation</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">variance</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Variance</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">minimum_recorded_value</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Minimum recorded value of this variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">maximum_recorded_value</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Maximum recorded value of this variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">mean</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Mean</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">median</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Median</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">most_common_unit_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Most common Unit ID</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">most_common_value</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Most common value</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">number_of_unique_daily_values</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Number of unique daily values</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">number_of_changes</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Number of changes</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">skewness</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Skewness</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">kurtosis</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Kurtosis</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">latitude</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Latitude</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">longitude</span>
+      <span class="param-type">BigDecimal</span>
+      
+      <p class="param-description">Longitude</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">location</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Location</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">created_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was first created. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">updated_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was last updated. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">outcome</span>
+      <span class="param-type">Boolean</span>
+      
+      <p class="param-description">Outcome variables (those with `outcome` == 1) are variables for which a human would generally want to identify the influencing factors.  These include symptoms of illness, physique, mood, cognitive performance, etc.  Generally correlation calculations are only performed on outcome variables</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sources</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Comma-separated list of source names to limit variables to those sources</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">earliest_source_time</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Earliest source time</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">latest_source_time</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Latest source time</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">earliest_measurement_time</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Earliest measurement time</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">latest_measurement_time</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Latest measurement time</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">earliest_filling_time</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Earliest filling time</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">latest_filling_time</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Latest filling time</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">limit</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">offset</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sort</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Sort by given field. If the field is prefixed with &#39;-&#39;, it will sort in descending order.</p>
+	  </li>
+    
+  </ul>
+  
+  <h2><a name="applicationVariableUserSourcesGet"></a>applicationVariableUserSourcesGet</h2>
+  <hr>
+  <p></p>
+  <p>Get all VariableUserSources</p>
+  <h3 class="section">URL</h3>
+  <code>https://app.quantimo.do/api/v2/application/variableUserSources</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="inline_response_200_10"><a href="">inline_response_200_10</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">variable_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">ID of variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">timestamp</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Time that this measurement occurred Uses epoch minute (epoch time divided by 60)</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">earliest_measurement_time</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Earliest measurement time</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">latest_measurement_time</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Latest measurement time</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">created_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was first created. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">updated_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was last updated. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">limit</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">offset</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sort</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Sort by given field. If the field is prefixed with &#39;-&#39;, it will sort in descending order.</p>
+	  </li>
+    
+  </ul>
+  
+  <h2><a name="applicationVotesGet"></a>applicationVotesGet</h2>
+  <hr>
+  <p></p>
+  <p>Get all Votes</p>
+  <h3 class="section">URL</h3>
+  <code>https://app.quantimo.do/api/v2/application/votes</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="inline_response_200_11"><a href="">inline_response_200_11</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+  	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">client_id</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The ID of the client application which last created or updated this vote</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">cause_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">ID of predictor variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">effect_id</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">ID of outcome variable</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">value</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Value of Vote. 1 is for upvote. 0 is for downvote.  Otherwise, there is no vote.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">created_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was first created. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">updated_at</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">When the record was last updated. Use ISO 8601 datetime format</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">limit</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0. The maximum limit is 200 records.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">offset</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">OFFSET says to skip that many rows before beginning to return rows to the client. OFFSET 0 is the same as omitting the OFFSET clause. If both OFFSET and LIMIT appear, then OFFSET rows are skipped before starting to count the LIMIT rows that are returned.</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sort</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Sort by given field. If the field is prefixed with &#39;-&#39;, it will sort in descending order.</p>
+	  </li>
+    
+  </ul>
+  
+  
+</div>

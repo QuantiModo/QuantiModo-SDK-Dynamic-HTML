@@ -23,10 +23,22 @@
       
       
       
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
       <span class="param-name">correlation</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">correlation</p>
+      <p class="param-description">Pearson correlation coefficient between cause and effect measurements</p>
 	  </li>
     
 	  <li class="parameter">
@@ -38,7 +50,7 @@
       <span class="param-name">cause_id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">cause_id</p>
+      <p class="param-description">Variable ID of the predictor variable for which the user desires correlations</p>
 	  </li>
     
 	  <li class="parameter">
@@ -50,7 +62,7 @@
       <span class="param-name">effect_id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">effect_id</p>
+      <p class="param-description">Variable ID of the outcome variable for which the user desires correlations</p>
 	  </li>
     
 	  <li class="parameter">
@@ -62,7 +74,7 @@
       <span class="param-name">onset_delay</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">onset_delay</p>
+      <p class="param-description">User estimated (or default number of seconds) after cause measurement before a perceivable effect is observed</p>
 	  </li>
     
 	  <li class="parameter">
@@ -74,7 +86,7 @@
       <span class="param-name">duration_of_action</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">duration_of_action</p>
+      <p class="param-description">Number of seconds over which the predictor variable event is expected to produce a perceivable effect following the onset delay</p>
 	  </li>
     
 	  <li class="parameter">
@@ -86,7 +98,7 @@
       <span class="param-name">number_of_pairs</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">number_of_pairs</p>
+      <p class="param-description">Number of predictor/outcome data points used in the analysis</p>
 	  </li>
     
 	  <li class="parameter">
@@ -98,7 +110,7 @@
       <span class="param-name">value_predicting_high_outcome</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">value_predicting_high_outcome</p>
+      <p class="param-description">Predictor daily aggregated measurement value that predicts an above average effect measurement value (in default unit for predictor variable)</p>
 	  </li>
     
 	  <li class="parameter">
@@ -110,7 +122,7 @@
       <span class="param-name">value_predicting_low_outcome</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">value_predicting_low_outcome</p>
+      <p class="param-description">Predictor daily aggregated measurement value that predicts a below average effect measurement value (in default unit for outcome variable)</p>
 	  </li>
     
 	  <li class="parameter">
@@ -122,19 +134,7 @@
       <span class="param-name">optimal_pearson_product</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">optimal_pearson_product</p>
-	  </li>
-    
-	  <li class="parameter">
-      
-      <span class="param-in">Query: </span>
-      
-      
-      
-      <span class="param-name">vote</span>
-      <span class="param-type">BigDecimal</span>
-      
-      <p class="param-description">vote</p>
+      <p class="param-description">Optimal Pearson Product</p>
 	  </li>
     
 	  <li class="parameter">
@@ -146,7 +146,7 @@
       <span class="param-name">number_of_users</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">number_of_users</p>
+      <p class="param-description">Number of users whose data was used in this aggregation</p>
 	  </li>
     
 	  <li class="parameter">
@@ -158,7 +158,7 @@
       <span class="param-name">number_of_correlations</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">number_of_correlations</p>
+      <p class="param-description">Number of correlational analyses used in this aggregation</p>
 	  </li>
     
 	  <li class="parameter">
@@ -170,7 +170,7 @@
       <span class="param-name">statistical_significance</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">statistical_significance</p>
+      <p class="param-description">A function of the effect size and sample size</p>
 	  </li>
     
 	  <li class="parameter">
@@ -182,7 +182,7 @@
       <span class="param-name">cause_unit</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">cause_unit</p>
+      <p class="param-description">Abbreviated unit name for the predictor variable</p>
 	  </li>
     
 	  <li class="parameter">
@@ -194,7 +194,7 @@
       <span class="param-name">cause_unit_id</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">cause_unit_id</p>
+      <p class="param-description">Unit ID for the predictor variable</p>
 	  </li>
     
 	  <li class="parameter">
@@ -206,7 +206,7 @@
       <span class="param-name">cause_changes</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">cause_changes</p>
+      <p class="param-description">Number of times that the predictor time series changes</p>
 	  </li>
     
 	  <li class="parameter">
@@ -218,7 +218,7 @@
       <span class="param-name">effect_changes</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">effect_changes</p>
+      <p class="param-description">Number of times that the predictor time series changes</p>
 	  </li>
     
 	  <li class="parameter">
@@ -230,7 +230,7 @@
       <span class="param-name">aggregate_qm_score</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">aggregate_qm_score</p>
+      <p class="param-description">Aggregated QM Score which is directly proportional with the relevance of each predictor or outcome</p>
 	  </li>
     
 	  <li class="parameter">
@@ -242,7 +242,7 @@
       <span class="param-name">created_at</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">created_at</p>
+      <p class="param-description">Date at which the analysis was first performed</p>
 	  </li>
     
 	  <li class="parameter">
@@ -254,7 +254,7 @@
       <span class="param-name">updated_at</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">updated_at</p>
+      <p class="param-description">Date at which the analysis was last updated</p>
 	  </li>
     
 	  <li class="parameter">
@@ -266,7 +266,7 @@
       <span class="param-name">status</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">status</p>
+      <p class="param-description">Indicates whether an analysis is up to date (UPDATED), needs to be updated (WAITING), or had an error (ERROR)</p>
 	  </li>
     
 	  <li class="parameter">
@@ -278,7 +278,7 @@
       <span class="param-name">error_message</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">error_message</p>
+      <p class="param-description">Message describing any problems encountered during the analysis</p>
 	  </li>
     
 	  <li class="parameter">
@@ -290,7 +290,7 @@
       <span class="param-name">last_successful_update_time</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">last_successful_update_time</p>
+      <p class="param-description">Last Successful update time</p>
 	  </li>
     
 	  <li class="parameter">
@@ -302,7 +302,7 @@
       <span class="param-name">reverse_pearson_correlation_coefficient</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">reverse_pearson_correlation_coefficient</p>
+      <p class="param-description">Correlation when cause and effect are reversed. For any causal relationship, the forward correlation should exceed the reverse correlation</p>
 	  </li>
     
 	  <li class="parameter">
@@ -314,7 +314,7 @@
       <span class="param-name">predictive_pearson_correlation_coefficient</span>
       <span class="param-type">BigDecimal</span>
       
-      <p class="param-description">predictive_pearson_correlation_coefficient</p>
+      <p class="param-description">Predictive Pearson Correlation Coefficient</p>
 	  </li>
     
 	  <li class="parameter">
@@ -326,7 +326,7 @@
       <span class="param-name">limit</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">limit</p>
+      <p class="param-description">Limit the number of results returned</p>
 	  </li>
     
 	  <li class="parameter">
@@ -338,7 +338,7 @@
       <span class="param-name">offset</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">offset</p>
+      <p class="param-description">Records from give Offset</p>
 	  </li>
     
 	  <li class="parameter">
@@ -350,7 +350,7 @@
       <span class="param-name">sort</span>
       <span class="param-type">String</span>
       
-      <p class="param-description">sort</p>
+      <p class="param-description">Sort records by given field</p>
 	  </li>
     
   </ul>
@@ -368,6 +368,18 @@
   <h3 class="section">Parameters</h3>
   <ul>
   	
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
+	  </li>
+    
 	  <li class="parameter">
       
       
@@ -407,6 +419,18 @@
       <p class="param-description">id of AggregatedCorrelation</p>
 	  </li>
     
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
+	  </li>
+    
   </ul>
   
   <h2><a name="aggregatedCorrelationsIdPut"></a>aggregatedCorrelationsIdPut</h2>
@@ -432,6 +456,18 @@
       <span class="param-type">Integer</span>
       
       <p class="param-description">id of AggregatedCorrelation</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
 	  </li>
     
 	  <li class="parameter">
@@ -471,6 +507,18 @@
       <span class="param-type">Integer</span>
       
       <p class="param-description">id of AggregatedCorrelation</p>
+	  </li>
+    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
 	  </li>
     
   </ul>

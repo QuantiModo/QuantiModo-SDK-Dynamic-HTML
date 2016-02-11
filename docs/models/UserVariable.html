@@ -9,6 +9,13 @@
 </ul>
   
 <ul class="parameter">
+  <li class="param-required-">user_id : Integer
+    <br/>User ID
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
   <li class="param-required-">client_id : String
     <br/>client_id
     
@@ -205,8 +212,8 @@
 </ul>
   
 <ul class="parameter">
-  <li class="param-required-">minimum_recorded_daily_value : Float
-    <br/>Minimum recorded daily value of this variable
+  <li class="param-required-">minimum_recorded_value : Float
+    <br/>Minimum recorded value of this variable
     
   </li>
 </ul>
@@ -296,15 +303,29 @@
 </ul>
   
 <ul class="parameter">
+  <li class="param-required-">experiment_start_time : Date
+    <br/>Earliest measurement start_time to be used in analysis. Use ISO 8601 datetime format
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">experiment_end_time : Date
+    <br/>Latest measurement start_time to be used in analysis. Use ISO 8601 datetime format
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
   <li class="param-required-">created_at : Date
-    <br/>created_at
+    <br/>When the record was first created. Use ISO 8601 datetime format
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-">updated_at : Date
-    <br/>updated_at
+    <br/>When the record in the database was last updated. Use ISO 8601 datetime format
     
   </li>
 </ul>

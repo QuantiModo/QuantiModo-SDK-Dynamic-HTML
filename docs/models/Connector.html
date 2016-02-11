@@ -10,14 +10,14 @@
   
 <ul class="parameter">
   <li class="param-required-true">name : String
-    <br/>Connector lowercase system name
+    <br/>Lowercase system name for the data source
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">display_name : String
-    <br/>Connector pretty display name
+    <br/>Pretty display name for the data source
     
   </li>
 </ul>
@@ -38,28 +38,42 @@
   
 <ul class="parameter">
   <li class="param-required-true">short_description : String
-    <br/>Short description
+    <br/>Short description of the service (such as the categories it tracks)
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">long_description : String
-    <br/>Long description
+    <br/>Longer paragraph description of the data provider
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">enabled : Boolean
-    <br/>enabled
+    <br/>Set to 1 if the connector should be returned when listing connectors
     
   </li>
 </ul>
   
 <ul class="parameter">
   <li class="param-required-true">oauth : Boolean
-    <br/>oauth
+    <br/>Set to 1 if the connector uses OAuth authentication as opposed to username/password
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">created_at : Date
+    <br/>When the record was first created. Use ISO 8601 datetime format
+    
+  </li>
+</ul>
+  
+<ul class="parameter">
+  <li class="param-required-">updated_at : Date
+    <br/>When the record in the database was last updated. Use ISO 8601 datetime format
     
   </li>
 </ul>
