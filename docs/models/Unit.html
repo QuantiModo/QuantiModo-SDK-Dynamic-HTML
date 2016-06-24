@@ -1,94 +1,47 @@
 
 <h2>Unit</h2>
-  
-<ul class="parameter">
-  <li class="param-required-">id : Integer
-    <br/>id
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
-  <li class="param-required-">client_id : String
-    <br/>client_id
-    
-  </li>
-</ul>
-  
 <ul class="parameter">
   <li class="param-required-true">name : String
     <br/>Unit name
-    
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">abbreviated_name : String
+  <li class="param-required-true">abbreviatedName : String
     <br/>Unit abbreviation
-    
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">category_id : Integer
-    <br/>Unit category ID
-    
+  <li class="param-required-true">category : String
+    <br/>Unit category
+      <dl class="param-enum">
+        <dt>Enum:
+            <dd>Distance</dd>
+            <dd>Duration</dd>
+            <dd>Energy</dd>
+            <dd>Frequency</dd>
+            <dd>Miscellany</dd>
+            <dd>Pressure</dd>
+            <dd>Proportion</dd>
+            <dd>Rating</dd>
+            <dd>Temperature</dd>
+            <dd>Volume</dd>
+            <dd>Weight</dd>
+        </dt>
+      </dl>
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-">minimum_value : Float
-    <br/>Unit minimum value
-    
+  <li class="param-required-">minimumValue : Double
+    <br/>The smallest acceptable value for measurements using this unit
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-">maximum_value : Float
-    <br/>Unit maximum value
-    
+  <li class="param-required-">maximumValue : Double
+    <br/>The largest acceptable value for measurements using this unit
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-">updated : Integer
-    <br/>updated
-    
+  <li class="param-required-true">conversionSteps : List
+    <br/>Conversion steps list
   </li>
 </ul>
-  
-<ul class="parameter">
-  <li class="param-required-">default_unit_id : Integer
-    <br/>ID of default unit
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
-  <li class="param-required-">multiply : Float
-    <br/>Value multiplied to
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
-  <li class="param-required-">add : Float
-    <br/>Value which should be added to convert to default unit
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
-  <li class="param-required-">created_at : Date
-    <br/>created_at
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
-  <li class="param-required-">updated_at : Date
-    <br/>updated_at
-    
-  </li>
-</ul>
-  

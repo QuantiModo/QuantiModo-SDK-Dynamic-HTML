@@ -1,171 +1,112 @@
 
 <h2>Correlation</h2>
-  
 <ul class="parameter">
-  <li class="param-required-">id : Integer
-    <br/>id
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
-  <li class="param-required-true">timestamp : Integer
-    <br/>Time at which correlation was calculated
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
-  <li class="param-required-true">user_id : Integer
-    <br/>ID of user that owns this correlation
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
-  <li class="param-required-true">correlation : Float
+  <li class="param-required-true">correlationCoefficient : BigDecimal
     <br/>Pearson correlation coefficient between cause and effect measurements
-    
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">cause_id : Integer
-    <br/>variable ID of the cause variable for which the user desires correlations
-    
+  <li class="param-required-true">cause : String
+    <br/>ORIGINAL variable name of the cause variable for which the user desires correlations.
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">effect_id : Integer
-    <br/>variable ID of the effect variable for which the user desires correlations
-    
+  <li class="param-required-">originalCause : String
+    <br/>original name of the cause.
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">onset_delay : Integer
+  <li class="param-required-true">effect : String
+    <br/>ORIGINAL variable name of the effect variable for which the user desires correlations.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">originalEffect : String
+    <br/>effect variable original name.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">onsetDelay : Double
     <br/>User estimated or default time after cause measurement before a perceivable effect is observed
-    
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">duration_of_action : Integer
+  <li class="param-required-true">durationOfAction : BigDecimal
     <br/>Time over which the cause is expected to produce a perceivable effect following the onset delay
-    
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">number_of_pairs : Integer
+  <li class="param-required-true">numberOfPairs : BigDecimal
     <br/>Number of points that went into the correlation calculation
-    
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">value_predicting_high_outcome : Float
-    <br/>cause value that predicts an above average effect value (in default unit for cause variable)
-    
+  <li class="param-required-">effectSize : String
+    <br/>Magnitude of the effects of a cause indicating whether it&#39;s practically meaningful.
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">value_predicting_low_outcome : Float
-    <br/>cause value that predicts a below average effect value (in default unit for cause variable)
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
-  <li class="param-required-true">optimal_pearson_product : Float
-    <br/>Optimal Pearson Product
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
-  <li class="param-required-true">vote : Float
-    <br/>Vote
-    
-  </li>
-</ul>
-  
-<ul class="parameter">
-  <li class="param-required-true">statistical_significance : Float
+  <li class="param-required-">statisticalSignificance : String
     <br/>A function of the effect size and sample size
-    
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">cause_unit : String
-    <br/>Unit of Cause
-    
+  <li class="param-required-true">timestamp : BigDecimal
+    <br/>Time at which correlation was calculated
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">cause_unit_id : Integer
-    <br/>Unit ID of Cause
-    
+  <li class="param-required-">reverseCorrelation : BigDecimal
+    <br/>Correlation when cause and effect are reversed. For any causal relationship, the forward correlation should exceed the reverse correlation.
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">cause_changes : Integer
-    <br/>Cause changes
-    
+  <li class="param-required-">causalityFactor : BigDecimal
+    <br/>
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">effect_changes : Integer
-    <br/>Effect changes
-    
+  <li class="param-required-">causeCategory : String
+    <br/>Variable category of the cause variable.
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">qm_score : Float
-    <br/>QM Score
-    
+  <li class="param-required-">effectCategory : String
+    <br/>Variable category of the effect variable.
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">error : String
-    <br/>error
-    
+  <li class="param-required-">valuePredictingHighOutcome : BigDecimal
+    <br/>cause value that predicts an above average effect value (in default unit for cause variable)
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-">created_at : Date
-    <br/>created_at
-    
+  <li class="param-required-">valuePredictingLowOutcome : BigDecimal
+    <br/>cause value that predicts a below average effect value (in default unit for cause variable)
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-">updated_at : Date
-    <br/>updated_at
-    
+  <li class="param-required-">optimalPearsonProduct : BigDecimal
+    <br/>Optimal Pearson Product
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">reverse_pearson_correlation_coefficient : Float
-    <br/>Correlation when cause and effect are reversed. For any causal relationship, the forward correlation should exceed the reverse correlation
-    
+  <li class="param-required-">averageVote : BigDecimal
+    <br/>Average Vote
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">predictive_pearson_correlation_coefficient : Float
-    <br/>Predictive Pearson Correlation Coefficient
-    
+  <li class="param-required-">userVote : BigDecimal
+    <br/>User Vote
   </li>
 </ul>
-  
+<ul class="parameter">
+  <li class="param-required-">causeUnit : String
+    <br/>Unit of the predictor variable
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">causeUnitId : Integer
+    <br/>Unit Id of the predictor variable
+  </li>
+</ul>

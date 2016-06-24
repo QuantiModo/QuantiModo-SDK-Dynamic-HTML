@@ -1,0 +1,93 @@
+
+<h2>TrackingReminderNotification</h2>
+<ul class="parameter">
+  <li class="param-required-true">id : Integer
+    <br/>id for the specific PENDING tracking remidner
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">trackingReminderId : Integer
+    <br/>id for the repeating tracking remidner
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">clientId : String
+    <br/>clientId
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">userId : Integer
+    <br/>ID of User
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">variableId : Integer
+    <br/>Id for the variable to be tracked
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">pendingReminderTime : Date
+    <br/>ISO 8601 timestamp for the specific time the variable should be tracked in UTC.  This will be used for the measurement startTime if the track endpoint is used.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">defaultValue : Float
+    <br/>Default value to use for the measurement when tracking
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">reminderSound : String
+    <br/>String identifier for the sound to accompany the reminder
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">popUp : Boolean
+    <br/>True if the reminders should appear as a popup notification
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">sms : Boolean
+    <br/>True if the reminders should be delivered via SMS
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">email : Boolean
+    <br/>True if the reminders should be delivered via email
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">notificationBar : Boolean
+    <br/>True if the reminders should appear in the notification bar
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">updatedAt : Date
+    <br/>When the record in the database was last updated. Use ISO 8601 datetime format. Time zone should be UTC and not local.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">variableName : String
+    <br/>Name of the variable to be used when sending measurements
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">variableCategoryName : String
+    <br/>Name of the variable category to be used when sending measurements
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">abbreviatedUnitName : String
+    <br/>Abbreviated name of the unit to be used when sending measurements
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">combinationOperation : String
+    <br/>The way multiple measurements are aggregated over time
+      <dl class="param-enum">
+        <dt>Enum:
+            <dd>MEAN</dd>
+            <dd>SUM</dd>
+        </dt>
+      </dl>
+  </li>
+</ul>

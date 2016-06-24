@@ -1,0 +1,133 @@
+
+<h2>TrackingReminder</h2>
+<ul class="parameter">
+  <li class="param-required-">id : Integer
+    <br/>id
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">clientId : String
+    <br/>clientId
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">userId : Integer
+    <br/>ID of User
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-true">variableId : Integer
+    <br/>Id for the variable to be tracked
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">defaultValue : Float
+    <br/>Default value to use for the measurement when tracking
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">reminderStartTime : String
+    <br/>Earliest time of day at which reminders should appear in UTC HH:MM:SS format
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">reminderEndTime : String
+    <br/>Latest time of day at which reminders should appear in UTC HH:MM:SS format
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">reminderSound : String
+    <br/>String identifier for the sound to accompany the reminder
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">reminderFrequency : Integer
+    <br/>Number of seconds between one reminder and the next
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">popUp : Boolean
+    <br/>True if the reminders should appear as a popup notification
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">sms : Boolean
+    <br/>True if the reminders should be delivered via SMS
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">email : Boolean
+    <br/>True if the reminders should be delivered via email
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">notificationBar : Boolean
+    <br/>True if the reminders should appear in the notification bar
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">lastReminded : Date
+    <br/>ISO 8601 timestamp for the last time a reminder was sent
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">lastTracked : Date
+    <br/>ISO 8601 timestamp for the last time a measurement was received for this user and variable
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">firstDailyReminderTime : String
+    <br/>Specific first time of day that the user should be reminded to track in UTC HH:MM:SS format
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">secondDailyReminderTime : String
+    <br/>Specific second time of day that the user should be reminded to track in UTC HH:MM:SS format
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">thirdDailyReminderTime : String
+    <br/>Specific third time of day that the user should be reminded to track in UTC HH:MM:SS format
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">startTrackingDate : String
+    <br/>Earliest date on which the user should be reminded to track in YYYY-MM-DD format
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">stopTrackingDate : String
+    <br/>Latest date on which the user should be reminded to track in YYYY-MM-DD format
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">updatedAt : Date
+    <br/>When the record in the database was last updated. Use ISO 8601 datetime format. Time zone should be UTC and not local.
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">variableName : String
+    <br/>Name of the variable to be used when sending measurements
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">variableCategoryName : String
+    <br/>Name of the variable category to be used when sending measurements
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">abbreviatedUnitName : String
+    <br/>Abbreviated name of the unit to be used when sending measurements
+  </li>
+</ul>
+<ul class="parameter">
+  <li class="param-required-">combinationOperation : String
+    <br/>The way multiple measurements are aggregated over time
+      <dl class="param-enum">
+        <dt>Enum:
+            <dd>MEAN</dd>
+            <dd>SUM</dd>
+        </dt>
+      </dl>
+  </li>
+</ul>

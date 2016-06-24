@@ -1,66 +1,52 @@
 
 <h2>Connector</h2>
-  
 <ul class="parameter">
-  <li class="param-required-">id : Integer
+  <li class="param-required-true">id : Integer
     <br/>Connector ID number
-    
   </li>
 </ul>
-  
 <ul class="parameter">
   <li class="param-required-true">name : String
     <br/>Connector lowercase system name
-    
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">display_name : String
+  <li class="param-required-true">displayName : String
     <br/>Connector pretty display name
-    
   </li>
 </ul>
-  
 <ul class="parameter">
   <li class="param-required-true">image : String
     <br/>URL to the image of the connector logo
-    
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">get_it_url : String
+  <li class="param-required-true">getItUrl : String
     <br/>URL to a site where one can get this device or application
-    
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">short_description : String
-    <br/>Short description
-    
+  <li class="param-required-true">connected : String
+    <br/>True if the authenticated user has this connector enabled
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">long_description : String
-    <br/>Long description
-    
+  <li class="param-required-true">connectInstructions : String
+    <br/>URL and parameters used when connecting to a service
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">enabled : Boolean
-    <br/>enabled
-    
+  <li class="param-required-true">lastUpdate : Integer
+    <br/>Epoch timestamp of last sync
   </li>
 </ul>
-  
 <ul class="parameter">
-  <li class="param-required-true">oauth : Boolean
-    <br/>oauth
-    
+  <li class="param-required-true">totalMeasurementsInLastUpdate : Integer
+    <br/>Number of measurements obtained during latest update
   </li>
 </ul>
-  
+<ul class="parameter">
+  <li class="param-required-true">noDataYet : Boolean
+    <br/>True if user has no measurements for this connector
+  </li>
+</ul>

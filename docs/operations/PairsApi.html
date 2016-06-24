@@ -2,21 +2,18 @@
   <h2><a name=""></a></h2>
   <p>This is the  API</p>
 
-  
-  
-  <h2><a name="v1PairsGet"></a>v1PairsGet</h2>
+  <h2><a name="v1PairsCsvGet"></a>v1PairsCsvGet</h2>
   <hr>
   <p></p>
   <p>Pairs cause measurements with effect measurements grouped over the duration of action after the onset delay.</p>
   <h3 class="section">URL</h3>
-  <code>https://localhost/api/v1/pairs</code>
+  <code>https://app.quantimo.do/api/v1/pairsCsv</code>
   <h3 class="section">HTTP Method</h3>
   <code>GET</code>
   <h3 class="section">Response Type</h3>
   <div class="model" data-model="Pairs"><a href="">List</a></div>
   <h3 class="section">Parameters</h3>
   <ul>
-  	
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -28,7 +25,6 @@
       
       <p class="param-description">Original variable name for the explanatory or independent variable</p>
 	  </li>
-    
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -40,7 +36,17 @@
       
       <p class="param-description">Original variable name for the outcome or dependent variable</p>
 	  </li>
-    
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
+	  </li>
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -52,7 +58,6 @@
       
       <p class="param-description">Name of data source that the cause measurements should come from</p>
 	  </li>
-    
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -64,7 +69,6 @@
       
       <p class="param-description">Abbreviated name for the unit cause measurements to be returned in</p>
 	  </li>
-    
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -76,7 +80,6 @@
       
       <p class="param-description">Delay before onset of action (in seconds) from the cause variable settings.</p>
 	  </li>
-    
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -88,7 +91,6 @@
       
       <p class="param-description">Duration of action (in seconds) from the cause variable settings.</p>
 	  </li>
-    
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -100,7 +102,6 @@
       
       <p class="param-description">Name of data source that the effectmeasurements should come from</p>
 	  </li>
-    
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -112,7 +113,6 @@
       
       <p class="param-description">Abbreviated name for the unit effect measurements to be returned in</p>
 	  </li>
-    
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -124,7 +124,6 @@
       
       <p class="param-description">The most recent date (in epoch time) for which we should return measurements</p>
 	  </li>
-    
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -136,7 +135,6 @@
       
       <p class="param-description">The earliest date (in epoch time) for which we should return measurements</p>
 	  </li>
-    
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -148,7 +146,6 @@
       
       <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0.</p>
 	  </li>
-    
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -160,7 +157,6 @@
       
       <p class="param-description">Now suppose you wanted to show results 11-20. You&#39;d set the offset to 10 and the limit to 10.</p>
 	  </li>
-    
 	  <li class="parameter">
       
       <span class="param-in">Query: </span>
@@ -170,10 +166,174 @@
       <span class="param-name">sort</span>
       <span class="param-type">Integer</span>
       
-      <p class="param-description">Sort by given field. If the field is prefixed with `-, it will sort in descending order.</p>
+      <p class="param-description">Sort by given field. If the field is prefixed with &#x60;-, it will sort in descending order.</p>
 	  </li>
-    
   </ul>
-  
-  
+  <h2><a name="v1PairsGet"></a>v1PairsGet</h2>
+  <hr>
+  <p></p>
+  <p>Pairs cause measurements with effect measurements grouped over the duration of action after the onset delay.</p>
+  <h3 class="section">URL</h3>
+  <code>https://app.quantimo.do/api/v1/pairs</code>
+  <h3 class="section">HTTP Method</h3>
+  <code>GET</code>
+  <h3 class="section">Response Type</h3>
+  <div class="model" data-model="Pairs"><a href="">List</a></div>
+  <h3 class="section">Parameters</h3>
+  <ul>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">cause</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Original variable name for the explanatory or independent variable</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">effect</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Original variable name for the outcome or dependent variable</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">access_token</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">User&#39;s OAuth2 access token</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">causeSource</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Name of data source that the cause measurements should come from</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">causeUnit</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Abbreviated name for the unit cause measurements to be returned in</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">delay</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Delay before onset of action (in seconds) from the cause variable settings.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">duration</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Duration of action (in seconds) from the cause variable settings.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">effectSource</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Name of data source that the effectmeasurements should come from</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">effectUnit</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">Abbreviated name for the unit effect measurements to be returned in</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">endTime</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The most recent date (in epoch time) for which we should return measurements</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">startTime</span>
+      <span class="param-type">String</span>
+      
+      <p class="param-description">The earliest date (in epoch time) for which we should return measurements</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">limit</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">The LIMIT is used to limit the number of results returned. So if you have 1000 results, but only want to the first 10, you would set this to 10 and offset to 0.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">offset</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Now suppose you wanted to show results 11-20. You&#39;d set the offset to 10 and the limit to 10.</p>
+	  </li>
+	  <li class="parameter">
+      
+      <span class="param-in">Query: </span>
+      
+      
+      
+      <span class="param-name">sort</span>
+      <span class="param-type">Integer</span>
+      
+      <p class="param-description">Sort by given field. If the field is prefixed with &#x60;-, it will sort in descending order.</p>
+	  </li>
+  </ul>
 </div>
